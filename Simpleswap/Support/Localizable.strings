@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  Simpleswap
+
+  Created by Podgainy Sergei on 26.04.2023.
+  
+*/
+
+"home" = "Home";
+"market" = "Market";
+"trade" = "Trade";
+"URLString" = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en";
+"search" = "Search...";
+"nameLabel" = "Name";
+"priceAnd24Change" = "Price/24h Change";
+"capAndVol" = "Cap/Vol";
