@@ -30,7 +30,6 @@ final class HomeFavoriteCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .left
         label.textColor = UIColor(red: 0.459, green: 0.459, blue: 0.459, alpha: 1)
-        label.text = "Bitcoin"
         return label
     }()
     private let coinSymbol: UILabel = {
@@ -38,7 +37,6 @@ final class HomeFavoriteCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .left
         label.font = .boldSystemFont(ofSize: 18)
-        label.text = "BTC"
         return label
     }()
     private let currentPriceNumber: UILabel = {
@@ -46,7 +44,6 @@ final class HomeFavoriteCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .boldSystemFont(ofSize: 18)
         label.textAlignment = .left
-        label.text = "$1000"
         return label
     }()
     private let percentageGrowth: UILabel = {
@@ -55,7 +52,6 @@ final class HomeFavoriteCell: UICollectionViewCell {
         label.textColor = .green
         label.font = .systemFont(ofSize: 12)
         label.textAlignment = .left
-        label.text = "4,3%"
         return label
     }()
     // MARK: - Override init
