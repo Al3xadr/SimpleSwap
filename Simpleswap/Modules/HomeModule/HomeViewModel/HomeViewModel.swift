@@ -5,7 +5,6 @@
 //  Created by apple on 08.05.2023.
 //
 
-
 import Foundation
 import RxSwift
 import RxCocoa
@@ -24,7 +23,7 @@ class HomeViewModel: HomeViewModelProtocol {
     }
     private let disposeBag = DisposeBag()
     func getCoinData() {
-        networkManager.fetcRxSwiftData(url: "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en")
+        networkManager.fetchRxSwiftData(url: "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en")
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] (value: [CoinModel])  in
                 self?.coinsData = value
