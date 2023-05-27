@@ -14,8 +14,6 @@ internal enum Constants {
   internal static let capAndVol = Constants.tr("Localizable", "capAndVol", fallback: "Cap/Vol")
   /// Localizable.strings
   ///   Simpleswap
-  /// 
-  ///   Created by Podgainy Sergei on 26.04.2023.
   internal static let home = Constants.tr("Localizable", "home", fallback: "Home")
   /// Market
   internal static let market = Constants.tr("Localizable", "market", fallback: "Market")

@@ -11,6 +11,6 @@ enum NetworkError: Error {
     case invalidUrl
     case invalidResponse
     case invalidData(Error)
-    case decodingFailed
+    case invalidStatusCode
     case networkFailed(Error)
 }

@@ -2,10 +2,7 @@
 //  MarketViewModel.swift
 //  Simpleswap
 //
-//  Created by Podgainy Sergei on 03.05.2023.
 //
-
-// Cюда пока не смотреть - это для теста
 
 import Foundation
 
@@ -33,16 +30,16 @@ final class MarketViewModel: MarketViewModelProtocol {
     }
 
     private func fetchCoins() {
-        for i in 0..<coinsData.count {
-            guard let urlPic = URL(string: coinsData[i].image) else { return }
+        for coin in 0..<coinsData.count {
+            guard let urlPic = URL(string: coinsData[coin].image) else { return }
             coins.append(Coin(
                 image: urlPic,
-                name: coinsData[i].name,
-                symbol: coinsData[i].symbol.uppercased(),
-                price: "$\(coinsData[i].currentPrice)",
-                change: String(coinsData[i].priceChangePercentage24H),
-                cap: "$" + String(coinsData[i].marketCap),
-                vol: String(coinsData[i].totalVolume)
+                name: coinsData[coin].name,
+                symbol: coinsData[coin].symbol.uppercased(),
+                price: "$\(coinsData[coin].currentPrice)",
+                change: String(coinsData[coin].priceChangePercentage24H),
+                cap: "$" + String(coinsData[coin].marketCap),
+                vol: String(coinsData[coin].totalVolume)
             ))
         }
     }

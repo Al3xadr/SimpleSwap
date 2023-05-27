@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		180FDCF42A1CC7980026D9ED /* Extension+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FDCF32A1CC7980026D9ED /* Extension+Array.swift */; };
+		180FDCF62A1F5F930026D9ED /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FDCF52A1F5F930026D9ED /* NetworkConstants.swift */; };
 		189C3CC82A08E3EF0091492C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CC72A08E3EF0091492C /* HomeViewModel.swift */; };
 		189C3CD02A08E4750091492C /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CCF2A08E4750091492C /* HomeModel.swift */; };
 		189C3CD32A08E49C0091492C /* HeaderSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CD22A08E49C0091492C /* HeaderSupplementaryView.swift */; };
@@ -64,6 +65,7 @@
 
 /* Begin PBXFileReference section */
 		180FDCF32A1CC7980026D9ED /* Extension+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Array.swift"; sourceTree = "<group>"; };
+		180FDCF52A1F5F930026D9ED /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		189C3CC72A08E3EF0091492C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		189C3CCF2A08E4750091492C /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		189C3CD22A08E49C0091492C /* HeaderSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSupplementaryView.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			children = (
 				18DBF98A29FBD7080095A675 /* NetworkError.swift */,
 				32A516972A02A1A8005662A9 /* NetworkModel.swift */,
+				180FDCF52A1F5F930026D9ED /* NetworkConstants.swift */,
 			);
 			path = NetworkModel;
 			sourceTree = "<group>";
@@ -299,25 +302,9 @@
 		32C5518E29FB01E100588C5F /* TabBarModule */ = {
 			isa = PBXGroup;
 			children = (
-				32C5518F29FB01ED00588C5F /* TabBarModel */,
 				32C5519129FB022000588C5F /* TabBarView */,
-				32C5519029FB021800588C5F /* TabBarViewModel */,
 			);
 			path = TabBarModule;
-			sourceTree = "<group>";
-		};
-		32C5518F29FB01ED00588C5F /* TabBarModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TabBarModel;
-			sourceTree = "<group>";
-		};
-		32C5519029FB021800588C5F /* TabBarViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TabBarViewModel;
 			sourceTree = "<group>";
 		};
 		32C5519129FB022000588C5F /* TabBarView */ = {
@@ -581,6 +568,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180FDCF62A1F5F930026D9ED /* NetworkConstants.swift in Sources */,
 				32A516A22A02E961005662A9 /* MarketViewModel.swift in Sources */,
 				189C3CC82A08E3EF0091492C /* HomeViewModel.swift in Sources */,
 				18DBF98729FBD5E60095A675 /* NetworkManager.swift in Sources */,
