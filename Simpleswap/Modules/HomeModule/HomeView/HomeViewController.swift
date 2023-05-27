@@ -2,12 +2,12 @@
 //  HomeViewController.swift
 //  Simpleswap
 //
-//  Created by Podgainy Sergei on 20.04.2023.
 //
 
 import UIKit
-
+import RxSwift
 final class HomeViewController: UIViewController {
+    private let disposeBag = DisposeBag()
     private let viewModel: HomeViewModelProtocol
     private var coins = [HomeCoinModel]()
     fileprivate typealias DataSource = UICollectionViewDiffableDataSource<SectionModelCoin, HomeCoinModel>
@@ -42,10 +42,15 @@ final class HomeViewController: UIViewController {
         collectionView.dataSource = self.dataSource
         setupView()
         setupContraints()
-        viewModel.fetchData { [weak self] in
-            self?.coins = self?.viewModel.coins ?? []
-            self?.update()
-        }
+        viewModel.getCoinData()
+        viewModel.coinsObservable
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] coins in
+                self?.coins = coins
+                self?.update()
+            })
+            .disposed(by: disposeBag)
+        collectionView.dataSource = dataSource
     }
 }
 // MARK: - Extension HomeViewController setupView and setupCollectionView
@@ -184,16 +189,16 @@ extension HomeViewController {
             }
         }
         return dataSource
-    }    
+    }
     func update(animatingDifferences: Bool = true) {
         var snapshot = DataSourceSnapshot()
-        let bestCoinSnapshotSection: [HomeCoinModel] =  coins.take(firstElement: 0, elementsCount: 1)
-        let TopCoinSnapshotSection: [HomeCoinModel] =  coins.take(firstElement: 1, elementsCount: 5)
-        let FavoritreCoin: [HomeCoinModel] = coins.take(firstElement: 5, elementsCount: 25)
+        let bestCoinSnapshotSection = [coins[0]]
+        let topCoinSnapshotSection = Array(coins[1..<5])
+        let favoriteCoinSnapshotSection = Array(coins[5..<25])
         snapshot.appendSections([.bestCoin, .topCoin, .topTwentyCoin])
         snapshot.appendItems(bestCoinSnapshotSection, toSection: .bestCoin)
-        snapshot.appendItems(TopCoinSnapshotSection, toSection: .topCoin)
-        snapshot.appendItems(FavoritreCoin, toSection: .topTwentyCoin)
+        snapshot.appendItems(topCoinSnapshotSection, toSection: .topCoin)
+        snapshot.appendItems(favoriteCoinSnapshotSection, toSection: .topTwentyCoin)
         dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
     }
 }

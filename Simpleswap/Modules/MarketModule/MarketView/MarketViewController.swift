@@ -2,7 +2,6 @@
 //  MarketViewController.swift
 //  Simpleswap
 //
-//  Created by Podgainy Sergei on 27.04.2023.
 //
 
 import UIKit
@@ -34,7 +33,6 @@ final class MarketViewController: UIViewController {
 
         tabBarItem.image = Asset.market.image
         tabBarItem.title = Constants.market
-        shownCoins = viewModel.coins
 
         viewModel.fetchData()
         setupSearchBar()
