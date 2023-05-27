@@ -10,7 +10,7 @@ import Alamofire
 import RxSwift
 protocol NetworkManagerProtocol {
     func getRequestData(url: String, completion: @escaping (Result<[CoinModel], NetworkError>) -> Void)
-    func fetcRxSwiftData<T: Decodable> ( url: String) -> Observable<T>
+    func fetchRxSwiftData<T: Decodable> ( url: String) -> Observable<T>
 }
 
 final class NetworkManager: NetworkManagerProtocol {
@@ -34,7 +34,7 @@ final class NetworkManager: NetworkManagerProtocol {
             }
         }
     }
-    func fetcRxSwiftData<T: Decodable> ( url: String) -> Observable<T> {
+    func fetchRxSwiftData<T: Decodable> ( url: String) -> Observable<T> {
         return Observable<T>.create { observer in
             let request =  AF.request(url, method: .get).responseDecodable(decoder: self.decoder) { (response: AFDataResponse<T>)  in
                 switch response.result {
