@@ -2,7 +2,6 @@
 //  TradeViewController.swift
 //  Simpleswap
 //
-//  Created by Podgainy Sergei on 27.04.2023.
 //
 
 import UIKit

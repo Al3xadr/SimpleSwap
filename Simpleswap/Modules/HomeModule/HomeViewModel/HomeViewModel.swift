@@ -5,43 +5,56 @@
 //  Created by apple on 08.05.2023.
 //
 
-import Foundation
 
+import Foundation
+import RxSwift
+import RxCocoa
 protocol HomeViewModelProtocol {
-    func fetchData(completion: @escaping () -> Void)
     var coins: [HomeCoinModel] { get }
+    var coinsObservable: Observable<[HomeCoinModel]> { get }
+    func getCoinData()
 }
 class HomeViewModel: HomeViewModelProtocol {
+    var coins: [HomeCoinModel] = []
     private let networkManager: NetworkManagerProtocol = NetworkManager()
     private var coinsData = [CoinModel]()
-    var coins = [HomeCoinModel]()
-
-    func fetchData(completion: @escaping () -> Void) {
-        networkManager.getRequestData(url: Constants.urlString) { result in
-            switch result {
-            case .success(let coins):
-                self.coinsData = coins
-                self.fetchCoins()
-            case .failure(let fail):
-                print(fail)
-            }
-            DispatchQueue.main.async {
-                completion()
-            }
-        }
+    private let coinsSubject = PublishSubject<[HomeCoinModel]>()
+    internal var coinsObservable: Observable<[HomeCoinModel]> {
+        return coinsSubject.asObservable()
     }
-
+    private let disposeBag = DisposeBag()
+    func getCoinData() {
+        networkManager.fetcRxSwiftData(url: "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en")
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] (value: [CoinModel])  in
+                self?.coinsData = value
+                self?.fetchCoins()
+                self?.coinsSubject.onNext(self?.coins ?? [])
+            }, onError: { error in
+                switch error {
+                case NetworkError.invalidResponse:
+                    print("Invalid Response")
+                case NetworkError.invalidStatusCode:
+                    print("Invalid status code")
+                default:
+                    print("\(error)")
+                }
+            })
+            .disposed(by: disposeBag)
+    }
     private func fetchCoins() {
-            for coin in coinsData {
-                guard let urlPic = URL(string: coin.image) else { return }
-                coins.append(HomeCoinModel(
-                    name: coin.name,
-                    image: urlPic,
-                    currentPrice: "$" + String(format: "%.3f", coin.currentPrice),
-                    priceChange24h: "$" + String(coin.priceChange24H),
-                    priceChangePercentage24h: "$" + String(format: "%.2f", coin.priceChangePercentage24H) + "%",
-                    id: " \(coin.symbol.uppercased())"
-                ))
-            }
+        var coins = [HomeCoinModel]()
+        for coin in coinsData {
+            guard let urlPic = URL(string: coin.image) else { return }
+            coins.append(HomeCoinModel(
+                name: coin.name,
+                image: urlPic,
+                currentPrice: "$\(coin.currentPrice)",
+                priceChange24h: String(coin.priceChange24H),
+                priceChangePercentage24h: "$" + String(coin.priceChangePercentage24H) + "%",
+                id: coin.symbol.uppercased()
+            ))
         }
+        self.coins = coins
+    }
 }
