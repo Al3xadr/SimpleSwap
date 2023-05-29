@@ -8,10 +8,8 @@
 import Foundation
 import UIKit
 final class FavoriteViewController: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         title = String(describing: Self.self)
         view.backgroundColor = .white
         tabBarItem.image = Asset.favorite.image

@@ -16,7 +16,6 @@
 		189C3CD82A08E4E10091492C /* HomeTopCoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CD72A08E4E10091492C /* HomeTopCoinCell.swift */; };
 		189C3CDA2A08E4F90091492C /* HomeFavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CD92A08E4F90091492C /* HomeFavoriteCell.swift */; };
 		189C3CDC2A08E5460091492C /* HomeViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CDB2A08E5460091492C /* HomeViewControllerDataSource.swift */; };
-		189C3CDE2A08E5710091492C /* HomeVCLayoutSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CDD2A08E5710091492C /* HomeVCLayoutSections.swift */; };
 		189C3CE62A122ED70091492C /* SectionModelCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CE52A122ED70091492C /* SectionModelCoin.swift */; };
 		18D5B0AA2A24D5630055E841 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5B0A92A24D5630055E841 /* FavoriteViewController.swift */; };
 		18DBF96929F94AEE0095A675 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 18DBF96829F94AEE0095A675 /* Alamofire */; };
@@ -74,7 +73,6 @@
 		189C3CD72A08E4E10091492C /* HomeTopCoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopCoinCell.swift; sourceTree = "<group>"; };
 		189C3CD92A08E4F90091492C /* HomeFavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFavoriteCell.swift; sourceTree = "<group>"; };
 		189C3CDB2A08E5460091492C /* HomeViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerDataSource.swift; sourceTree = "<group>"; };
-		189C3CDD2A08E5710091492C /* HomeVCLayoutSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCLayoutSections.swift; sourceTree = "<group>"; };
 		189C3CE52A122ED70091492C /* SectionModelCoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModelCoin.swift; sourceTree = "<group>"; };
 		18D5B0A92A24D5630055E841 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		18DBF98629FBD5E60095A675 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -329,7 +327,6 @@
 				189C3CD12A08E4920091492C /* HeaderSupplementaryView */,
 				325FD35029F1C7010050B269 /* HomeViewController.swift */,
 				189C3CDB2A08E5460091492C /* HomeViewControllerDataSource.swift */,
-				189C3CDD2A08E5710091492C /* HomeVCLayoutSections.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -612,7 +609,6 @@
 				326A4D022A09BC0A001D1820 /* TableViewHeaderFooterViewExtensions.swift in Sources */,
 				189C3CD82A08E4E10091492C /* HomeTopCoinCell.swift in Sources */,
 				32C551A129FB0CFA00588C5F /* XCAssets+Generated.swift in Sources */,
-				189C3CDE2A08E5710091492C /* HomeVCLayoutSections.swift in Sources */,
 				32A516982A02A1A8005662A9 /* NetworkModel.swift in Sources */,
 				189C3CD32A08E49C0091492C /* HeaderSupplementaryView.swift in Sources */,
 				189C3CD62A08E4C90091492C /* HomeBestCoinCell.swift in Sources */,
