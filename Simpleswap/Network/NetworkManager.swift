@@ -36,7 +36,8 @@ final class NetworkManager: NetworkManagerProtocol {
     }
     func fetchRxSwiftData<T: Decodable> ( url: String) -> Observable<T> {
         return Observable<T>.create { observer in
-            let request =  AF.request(url, method: .get).responseDecodable(decoder: self.decoder) { (response: AFDataResponse<T>)  in
+            let request =  AF.request(url, method: .get).responseDecodable(decoder: self.decoder)
+            { (response: AFDataResponse<T>)  in
                 switch response.result {
                 case .success(let value):
                     observer.onNext( value )

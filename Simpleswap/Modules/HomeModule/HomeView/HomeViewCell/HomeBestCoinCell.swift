@@ -55,7 +55,6 @@ final class HomeBestCoinCell: UICollectionViewCell {
         label.text = "Bitcoin"
         return label
     }()
-    
     private let priceChangeCoinLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -115,7 +114,6 @@ final class HomeBestCoinCell: UICollectionViewCell {
     // MARK: - Override init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         setupView()
         setupContraints()
     }
@@ -131,7 +129,6 @@ final class HomeBestCoinCell: UICollectionViewCell {
         percentageGrowth.text = nil
         coinIdLabel.text = nil
     }
-    
     func setupData(with coin: HomeCoinModel) {
         nameLabelCoin.text = coin.name
         imageViewCoin.kf.setImage(with: coin.image)

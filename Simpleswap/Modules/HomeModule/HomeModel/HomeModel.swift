@@ -14,7 +14,8 @@ struct HomeCoinModel: Hashable {
     let currentPrice: String
     let priceChange24h: String
     let priceChangePercentage24h: String
-    init(name: String, image: URL, currentPrice: String, priceChange24h: String, priceChangePercentage24h: String, id: String) {
+    init(name: String, image: URL, currentPrice: String,
+         priceChange24h: String, priceChangePercentage24h: String, id: String) {
         self.identifier = UUID()
         self.name = name
         self.image = image
