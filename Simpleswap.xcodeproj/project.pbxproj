@@ -18,6 +18,7 @@
 		189C3CDC2A08E5460091492C /* HomeViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CDB2A08E5460091492C /* HomeViewControllerDataSource.swift */; };
 		189C3CDE2A08E5710091492C /* HomeVCLayoutSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CDD2A08E5710091492C /* HomeVCLayoutSections.swift */; };
 		189C3CE62A122ED70091492C /* SectionModelCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CE52A122ED70091492C /* SectionModelCoin.swift */; };
+		18D5B0AA2A24D5630055E841 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5B0A92A24D5630055E841 /* FavoriteViewController.swift */; };
 		18DBF96929F94AEE0095A675 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 18DBF96829F94AEE0095A675 /* Alamofire */; };
 		18DBF96C29F94B1F0095A675 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 18DBF96B29F94B1F0095A675 /* RxCocoa */; };
 		18DBF96E29F94B1F0095A675 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 18DBF96D29F94B1F0095A675 /* RxSwift */; };
@@ -75,6 +76,7 @@
 		189C3CDB2A08E5460091492C /* HomeViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerDataSource.swift; sourceTree = "<group>"; };
 		189C3CDD2A08E5710091492C /* HomeVCLayoutSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCLayoutSections.swift; sourceTree = "<group>"; };
 		189C3CE52A122ED70091492C /* SectionModelCoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModelCoin.swift; sourceTree = "<group>"; };
+		18D5B0A92A24D5630055E841 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		18DBF98629FBD5E60095A675 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		18DBF98A29FBD7080095A675 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		322C362329F9A11E00A90609 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -150,6 +152,38 @@
 			path = HomeViewCell;
 			sourceTree = "<group>";
 		};
+		18D5B0A52A24D50C0055E841 /* FavoriteModule */ = {
+			isa = PBXGroup;
+			children = (
+				18D5B0A82A24D5460055E841 /* FavoriteViewModel */,
+				18D5B0A72A24D5380055E841 /* FavoriteView */,
+				18D5B0A62A24D52B0055E841 /* FavoriteModel */,
+			);
+			path = FavoriteModule;
+			sourceTree = "<group>";
+		};
+		18D5B0A62A24D52B0055E841 /* FavoriteModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FavoriteModel;
+			sourceTree = "<group>";
+		};
+		18D5B0A72A24D5380055E841 /* FavoriteView */ = {
+			isa = PBXGroup;
+			children = (
+				18D5B0A92A24D5630055E841 /* FavoriteViewController.swift */,
+			);
+			path = FavoriteView;
+			sourceTree = "<group>";
+		};
+		18D5B0A82A24D5460055E841 /* FavoriteViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FavoriteViewModel;
+			sourceTree = "<group>";
+		};
 		18DBF98529FBD5D30095A675 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +218,7 @@
 		32151D5629F1CD1F009BAEB9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				18D5B0A52A24D50C0055E841 /* FavoriteModule */,
 				3241098C2A03E43D00473864 /* CoinModule */,
 				32C5518E29FB01E100588C5F /* TabBarModule */,
 				32C5518629FAF2BA00588C5F /* HomeModule */,
@@ -572,6 +607,7 @@
 				32A516A22A02E961005662A9 /* MarketViewModel.swift in Sources */,
 				189C3CC82A08E3EF0091492C /* HomeViewModel.swift in Sources */,
 				18DBF98729FBD5E60095A675 /* NetworkManager.swift in Sources */,
+				18D5B0AA2A24D5630055E841 /* FavoriteViewController.swift in Sources */,
 				32A516A62A030DE8005662A9 /* CoinViewController.swift in Sources */,
 				326A4D022A09BC0A001D1820 /* TableViewHeaderFooterViewExtensions.swift in Sources */,
 				189C3CD82A08E4E10091492C /* HomeTopCoinCell.swift in Sources */,

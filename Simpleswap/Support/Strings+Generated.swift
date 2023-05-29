@@ -16,6 +16,8 @@ internal enum Constants {
   internal static let capAndVol = Constants.tr("Localizable", "capAndVol", fallback: "Cap/Vol")
   /// /coins/markets
   internal static let coinsMarket = Constants.tr("Localizable", "CoinsMarket", fallback: "/coins/markets")
+  /// Favorite
+  internal static let favorite = Constants.tr("Localizable", "favorite", fallback: "Favorite")
   /// Localizable.strings
   ///   Simpleswap
   internal static let home = Constants.tr("Localizable", "home", fallback: "Home")
@@ -39,8 +41,6 @@ internal enum Constants {
   internal static let sparkLine = Constants.tr("Localizable", "SparkLine", fallback: "false")
   /// Trade
   internal static let trade = Constants.tr("Localizable", "trade", fallback: "Trade")
-  /// https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en
-  internal static let urlString = Constants.tr("Localizable", "URLString", fallback: "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en")
   /// usd
   internal static let usd = Constants.tr("Localizable", "Usd", fallback: "usd")
 }
