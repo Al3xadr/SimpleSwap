@@ -66,6 +66,14 @@ final class HomeTopCoinCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        nameLabelCoin.text = nil
+        imageViewCoin.image = nil
+        currentPriceNumber.text = nil
+        coinSymbol.text = nil
+        percentageGrowth.text = nil
+    }
     func setupData(with coin: HomeCoinModel) {
         nameLabelCoin.text = coin.name
         imageViewCoin.kf.setImage(with: coin.image)

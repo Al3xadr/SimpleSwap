@@ -125,6 +125,11 @@ final class HomeBestCoinCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         nameLabelCoin.text = nil
+        imageViewCoin.image = nil
+        currentPriceNumber.text = nil
+        priceChangeCoinNumber.text = nil
+        percentageGrowth.text = nil
+        coinIdLabel.text = nil
     }
     
     func setupData(with coin: HomeCoinModel) {
