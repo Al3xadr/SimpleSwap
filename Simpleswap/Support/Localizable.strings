@@ -12,3 +12,12 @@
 "nameLabel" = "Name";
 "priceAnd24Change" = "Price/24h Change";
 "capAndVol" = "Cap/Vol";
+
+"BaseUrl" = "https://api.coingecko.com/api/v3";
+"CoinsMarket" = "/coins/markets";
+"Usd" = "usd";
+"MarketCap"= "market_cap_desc";
+"ResultPage" = "100";
+"Page"= "1";
+"SparkLine" = "false";
+"Local" = "en";

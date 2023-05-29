@@ -72,7 +72,6 @@ extension MarketViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = CoinViewController()
-        vc.coin = viewModel.coins[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
 }
