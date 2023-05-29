@@ -11,7 +11,7 @@ final class TabBarViewController: UITabBarController {
     private let home = HomeViewController(viewModel: HomeViewModel())
     private let market = MarketViewController(viewModel: MarketViewModel())
     private let trade = TradeViewController()
-
+    private let favorite = FavoriteViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,8 +40,9 @@ final class TabBarViewController: UITabBarController {
         home.loadViewIfNeeded()
         market.loadViewIfNeeded()
         trade.loadViewIfNeeded()
+        favorite.loadViewIfNeeded()
 
-        let arrayVC = [home, market, trade]
+        let arrayVC = [home, market, favorite, trade]
         setViewControllers(arrayVC, animated: true)
     }
 
@@ -68,6 +69,7 @@ final class TabBarViewController: UITabBarController {
         switch item.title {
         case "Home": navigationItem.rightBarButtonItem = .none
         case "Market": navigationItem.rightBarButtonItem = rightBarButton
+        case "Favorite": navigationItem.rightBarButtonItem = rightBarButton
         case "Trade": navigationItem.rightBarButtonItem = .none
         default: print("none")
         }
