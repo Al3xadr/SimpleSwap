@@ -5,28 +5,41 @@
 //
 
 import Foundation
-
+import RxSwift
+import RxCocoa
 protocol MarketViewModelProtocol {
     func fetchData()
     var coins: [Coin] { get }
+    var coinsObservable: Observable<[Coin]> { get }
 }
 
 final class MarketViewModel: MarketViewModelProtocol {
-
+    private let coinsSubject = PublishSubject<[Coin]>()
     private let networkManager: NetworkManagerProtocol = NetworkManager()
     private var coinsData = [CoinModel]()
-    var coins = [Coin]()
-
+    var coins: [Coin] = []
+    private let disposeBag = DisposeBag()
+    internal var coinsObservable: Observable<[Coin]> {
+        return coinsSubject.asObservable()
+    }
     func fetchData() {
-        networkManager.getRequestData(url: Constants.urlString) { result in
-            switch result {
-            case .success(let coins):
-                self.coinsData = coins
-                self.fetchCoins()
-            case .failure(let fail):
-                print(fail)
-            }
-        }
+        networkManager.fetchRxSwiftData(url: "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en")
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] ( value: [CoinModel]) in
+                self?.coinsData = value
+                self?.fetchCoins()
+                self?.coinsSubject.onNext(self?.coins ?? [])
+            }, onError: { error in
+                switch error {
+                case NetworkError.invalidResponse:
+                    print("Invalid Response")
+                case NetworkError.invalidStatusCode:
+                    print("Invalid status code")
+                default:
+                    print("\(error)")
+                }
+            })
+            .disposed(by: disposeBag)
     }
 
     private func fetchCoins() {
