@@ -49,9 +49,10 @@ class HomeViewModel: HomeViewModelProtocol {
                 name: coin.name,
                 image: urlPic,
                 currentPrice: "$\(coin.currentPrice)",
-                priceChange24h: String(coin.priceChange24H),
-                priceChangePercentage24h: "$" + String(coin.priceChangePercentage24H) + "%",
-                id: coin.symbol.uppercased()
+                priceChange24h: String(format: "%.03f", coin.priceChange24H) + "$",
+                priceChangePercentage24h: "$ " + String(format: "%.03f", coin.priceChangePercentage24H) + "%",
+                id: coin.symbol.uppercased(),
+                marketCapChangePercentage24h: String(format: "%.03f", coin.marketCapChangePercentage24H) + ":"
             ))
         }
         self.coins = coins

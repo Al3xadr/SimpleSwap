@@ -12,10 +12,18 @@ import Foundation
 internal enum Constants {
   /// https://api.coingecko.com/api/v3
   internal static let baseUrl = Constants.tr("Localizable", "BaseUrl", fallback: "https://api.coingecko.com/api/v3")
+  /// Best Coin
+  internal static let bestCoin = Constants.tr("Localizable", "Best Coin", fallback: "Best Coin")
+  /// BestCellCoin
+  internal static let bestCell = Constants.tr("Localizable", "BestCell", fallback: "BestCellCoin")
   /// Cap/Vol
   internal static let capAndVol = Constants.tr("Localizable", "capAndVol", fallback: "Cap/Vol")
   /// /coins/markets
   internal static let coinsMarket = Constants.tr("Localizable", "CoinsMarket", fallback: "/coins/markets")
+  /// Header
+  internal static let collectionHeader = Constants.tr("Localizable", "CollectionHeader", fallback: "Header")
+  /// Current price
+  internal static let currentPrice = Constants.tr("Localizable", "Current price", fallback: "Current price")
   /// Favorite
   internal static let favorite = Constants.tr("Localizable", "favorite", fallback: "Favorite")
   /// Localizable.strings
@@ -31,6 +39,8 @@ internal enum Constants {
   internal static let nameLabel = Constants.tr("Localizable", "nameLabel", fallback: "Name")
   /// 1
   internal static let page = Constants.tr("Localizable", "Page", fallback: "1")
+  /// Price Change 24h
+  internal static let priceChange = Constants.tr("Localizable", "Price Change", fallback: "Price Change 24h")
   /// Price/24h Change
   internal static let priceAnd24Change = Constants.tr("Localizable", "priceAnd24Change", fallback: "Price/24h Change")
   /// 100
@@ -39,6 +49,14 @@ internal enum Constants {
   internal static let search = Constants.tr("Localizable", "search", fallback: "Search...")
   /// false
   internal static let sparkLine = Constants.tr("Localizable", "SparkLine", fallback: "false")
+  /// TopCellCoin
+  internal static let topCell = Constants.tr("Localizable", "TopCell", fallback: "TopCellCoin")
+  /// Top 4 Coin
+  internal static let topFourCoin = Constants.tr("Localizable", "TopFourCoin", fallback: "Top 4 Coin")
+  /// TopTwentyCellCoin
+  internal static let topTwentyCell = Constants.tr("Localizable", "TopTwentyCell", fallback: "TopTwentyCellCoin")
+  /// Top 20 Coin
+  internal static let topTwentyCoin = Constants.tr("Localizable", "TopTwentyCoin", fallback: "Top 20 Coin")
   /// Trade
   internal static let trade = Constants.tr("Localizable", "trade", fallback: "Trade")
   /// usd
