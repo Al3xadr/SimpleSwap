@@ -23,11 +23,11 @@ final class HomeViewController: UIViewController {
         let viewLayout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: viewLayout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.register(HomeBestCoinCell.self, forCellWithReuseIdentifier: "Cell")
-        collectionView.register(HomeTopCoinCell.self, forCellWithReuseIdentifier: "CellTop")
-        collectionView.register(HomeFavoriteCell.self, forCellWithReuseIdentifier: "CellFavorite")
+        collectionView.register(HomeBestCoinCell.self, forCellWithReuseIdentifier: Constants.bestCell)
+        collectionView.register(HomeTopCoinCell.self, forCellWithReuseIdentifier: Constants.topCell)
+        collectionView.register(HomeFavoriteCell.self, forCellWithReuseIdentifier: Constants.topTwentyCell)
         collectionView.register(HeaderSupplementaryView.self, forSupplementaryViewOfKind:
-                                    UICollectionView.elementKindSectionHeader, withReuseIdentifier: "Header")
+                                    UICollectionView.elementKindSectionHeader, withReuseIdentifier: Constants.collectionHeader)
         return collectionView
     }()
     required init?(coder: NSCoder) {
@@ -51,7 +51,6 @@ final class HomeViewController: UIViewController {
                 self?.update()
             })
             .disposed(by: disposeBag)
-        collectionView.dataSource = dataSource
     }
 }
 // MARK: - Extension HomeViewController setupView and setupCollectionView
@@ -162,17 +161,18 @@ extension HomeViewController {
             UICollectionViewCell? in
             switch self.section[indexPath.section] {
             case .bestCoin:
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.bestCell, for: indexPath)
                 as? HomeBestCoinCell
                 cell?.setupData(with: homeCoinModel)
                 return cell
             case .topCoin:
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellTop", for: indexPath)
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.topCell, for: indexPath)
                 as? HomeTopCoinCell
                 cell?.setupData(with: homeCoinModel)
                 return cell
             case .topTwentyCoin:
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellFavorite", for: indexPath)
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.topTwentyCell,
+                                                              for: indexPath)
                 as? HomeFavoriteCell
                 cell?.setupData(with: homeCoinModel)
                 return cell
@@ -183,15 +183,15 @@ extension HomeViewController {
             switch sectionKind {
             case .topCoin:
                 let cell = collectionView.dequeueReusableSupplementaryView(
-                    ofKind: kind, withReuseIdentifier: "Header", for: indexPath)
+                    ofKind: kind, withReuseIdentifier: Constants.collectionHeader, for: indexPath)
                 as? HeaderSupplementaryView
-                cell?.configureHeader(categoryName: "Top 4 Coin")
+                cell?.configureHeader(categoryName: Constants.topFourCoin)
                 return cell
             case .topTwentyCoin:
                 let cell =  collectionView.dequeueReusableSupplementaryView(
-                    ofKind: kind, withReuseIdentifier: "Header", for: indexPath)
+                    ofKind: kind, withReuseIdentifier: Constants.collectionHeader, for: indexPath)
                 as? HeaderSupplementaryView
-                cell?.configureHeader(categoryName: "Top 20 Coin")
+                cell?.configureHeader(categoryName: Constants.topTwentyCoin)
                 return cell
             default:
                 return nil
@@ -202,12 +202,12 @@ extension HomeViewController {
     func update(animatingDifferences: Bool = true) {
         var snapshot = DataSourceSnapshot()
         let bestCoinSnapshotSection = [coins[0]]
-        let topCoinSnapshotSection = Array(coins[1..<5])
-        let favoriteCoinSnapshotSection = Array(coins[5..<25])
+        let topFiveCoinSnapshotSection = Array(coins[1..<5])
+        let topTwentyCoinSnapshotSection = Array(coins[5..<25])
         snapshot.appendSections([.bestCoin, .topCoin, .topTwentyCoin])
         snapshot.appendItems(bestCoinSnapshotSection, toSection: .bestCoin)
-        snapshot.appendItems(topCoinSnapshotSection, toSection: .topCoin)
-        snapshot.appendItems(favoriteCoinSnapshotSection, toSection: .topTwentyCoin)
+        snapshot.appendItems(topFiveCoinSnapshotSection, toSection: .topCoin)
+        snapshot.appendItems(topTwentyCoinSnapshotSection, toSection: .topTwentyCoin)
         dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
     }
 }

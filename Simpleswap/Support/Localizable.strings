@@ -21,3 +21,12 @@
 "Page"= "1";
 "SparkLine" = "false";
 "Local" = "en";
+"BestCell" = "BestCellCoin";
+"TopCell" ="TopCellCoin";
+"TopTwentyCell" = "TopTwentyCellCoin";
+"CollectionHeader" = "Header";
+"TopFourCoin" = "Top 4 Coin";
+"TopTwentyCoin" = "Top 20 Coin";
+"Best Coin" = "Best Coin";
+"Price Change" = "Price Change 24h";
+"Current price" = "Current price";
