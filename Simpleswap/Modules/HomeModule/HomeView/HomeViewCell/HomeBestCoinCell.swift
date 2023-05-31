@@ -44,78 +44,70 @@ final class HomeBestCoinCell: UICollectionViewCell {
     private let bestLabelCoin: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .boldSystemFont(ofSize: 18)
-        label.text = "Best Coin"
+        label.font = HomeConstantsBestCell.bestLabel
+        label.text = Constants.bestCoin
         return label
     }()
     let nameLabelCoin: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .boldSystemFont(ofSize: 22)
-        label.text = "Bitcoin"
+        label.font = HomeConstantsBestCell.nameLabel
         return label
     }()
-    
     private let priceChangeCoinLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Price Change 24h"
-        label.textColor = UIColor(red: 0.459, green: 0.459, blue: 0.459, alpha: 1)
-        label.font = .systemFont(ofSize: 14)
+        label.text = Constants.priceChange
+        label.textColor = HomeConstantsBestCell.priceColor
+        label.font = HomeConstantsBestCell.priceCoinLabel
         label.textAlignment = .left
         return label
     }()
     private let priceChangeCoinNumber: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .boldSystemFont(ofSize: 16)
-        label.text = "$16.98899"
+        label.font = HomeConstantsBestCell.coin
         return label
     }()
     private let coinGrowthNumber: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 16)
-        label.text = "0.00121"
+        label.font = HomeConstantsBestCell.coin
         return label
     }()
     private let coinIdLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 16)
-        label.text = "BTC"
+        label.font = HomeConstantsBestCell.coin
         label.textAlignment = .left
         return label
     }()
     private let percentageGrowth: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .green
-        label.font = .systemFont(ofSize: 16)
-        label.text = "4,3%"
+        label.textColor = HomeConstantsBestCell.priceColor
+        label.font = HomeConstantsBestCell.coin
         label.textAlignment = .right
         return label
     }()
     private let currentPriceLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Current price"
-        label.textColor = UIColor(red: 0.459, green: 0.459, blue: 0.459, alpha: 1)
-        label.font = .systemFont(ofSize: 14)
+        label.text = Constants.currentPrice
+        label.textColor = HomeConstantsBestCell.priceColor
+        label.font = HomeConstantsBestCell.priceCoinLabel
         label.textAlignment = .right
         return label
     }()
     private let currentPriceNumber: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .boldSystemFont(ofSize: 19)
-        label.text = "$1000"
+        label.font = HomeConstantsBestCell.currentPriceNumber
         return label
     }()
     // MARK: - Override init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         setupView()
         setupContraints()
     }
@@ -125,8 +117,12 @@ final class HomeBestCoinCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         nameLabelCoin.text = nil
+        imageViewCoin.image = nil
+        currentPriceNumber.text = nil
+        priceChangeCoinNumber.text = nil
+        percentageGrowth.text = nil
+        coinIdLabel.text = nil
     }
-    
     func setupData(with coin: HomeCoinModel) {
         nameLabelCoin.text = coin.name
         imageViewCoin.kf.setImage(with: coin.image)
@@ -134,6 +130,8 @@ final class HomeBestCoinCell: UICollectionViewCell {
         priceChangeCoinNumber.text = coin.priceChange24h
         percentageGrowth.text = coin.priceChangePercentage24h
         coinIdLabel.text = coin.id
+        coinGrowthNumber.text = coin.marketCapChangePercentage24h
+        
     }
 }
 // MARK: - setupView and setupContraints()
@@ -211,7 +209,7 @@ extension HomeBestCoinCell {
             priceChangeCoinNumber.leadingAnchor.constraint(equalTo: containerLabelResultMiddle.leadingAnchor),
             priceChangeCoinNumber.topAnchor.constraint(equalTo: containerLabelResultMiddle.topAnchor, constant: 5),
             priceChangeCoinNumber.heightAnchor.constraint(equalToConstant: 20),
-            priceChangeCoinNumber.widthAnchor.constraint(equalToConstant: 70)
+            priceChangeCoinNumber.widthAnchor.constraint(equalToConstant: 90)
         ])
         NSLayoutConstraint.activate([
             currentPriceNumber.trailingAnchor.constraint(equalTo: containerLabelResultMiddle.trailingAnchor, constant: -5),

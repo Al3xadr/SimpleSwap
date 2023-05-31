@@ -7,8 +7,26 @@
 "home" = "Home";
 "market" = "Market";
 "trade" = "Trade";
-"URLString" = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en";
+"favorite" = "Favorite";
 "search" = "Search...";
 "nameLabel" = "Name";
 "priceAnd24Change" = "Price/24h Change";
 "capAndVol" = "Cap/Vol";
+
+"BaseUrl" = "https://api.coingecko.com/api/v3";
+"CoinsMarket" = "/coins/markets";
+"Usd" = "usd";
+"MarketCap"= "market_cap_desc";
+"ResultPage" = "100";
+"Page"= "1";
+"SparkLine" = "false";
+"Local" = "en";
+"BestCell" = "BestCellCoin";
+"TopCell" ="TopCellCoin";
+"TopTwentyCell" = "TopTwentyCellCoin";
+"CollectionHeader" = "Header";
+"TopFourCoin" = "Top 4 Coin";
+"TopTwentyCoin" = "Top 20 Coin";
+"Best Coin" = "Best Coin";
+"Price Change" = "Price Change 24h";
+"Current price" = "Current price";

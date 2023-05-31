@@ -15,9 +15,11 @@
 		189C3CD62A08E4C90091492C /* HomeBestCoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CD52A08E4C90091492C /* HomeBestCoinCell.swift */; };
 		189C3CD82A08E4E10091492C /* HomeTopCoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CD72A08E4E10091492C /* HomeTopCoinCell.swift */; };
 		189C3CDA2A08E4F90091492C /* HomeFavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CD92A08E4F90091492C /* HomeFavoriteCell.swift */; };
-		189C3CDC2A08E5460091492C /* HomeViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CDB2A08E5460091492C /* HomeViewControllerDataSource.swift */; };
-		189C3CDE2A08E5710091492C /* HomeVCLayoutSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CDD2A08E5710091492C /* HomeVCLayoutSections.swift */; };
 		189C3CE62A122ED70091492C /* SectionModelCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CE52A122ED70091492C /* SectionModelCoin.swift */; };
+		18D5B0AA2A24D5630055E841 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5B0A92A24D5630055E841 /* FavoriteViewController.swift */; };
+		18D5B0AF2A25F1F50055E841 /* HomeConstantsBestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5B0AE2A25F1F50055E841 /* HomeConstantsBestCell.swift */; };
+		18D5B0B12A25F2180055E841 /* HomeConstantsTopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5B0B02A25F2180055E841 /* HomeConstantsTopCell.swift */; };
+		18D5B0B32A25F3240055E841 /* HomeConstantsTopTwentyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5B0B22A25F3240055E841 /* HomeConstantsTopTwentyCell.swift */; };
 		18DBF96929F94AEE0095A675 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 18DBF96829F94AEE0095A675 /* Alamofire */; };
 		18DBF96C29F94B1F0095A675 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 18DBF96B29F94B1F0095A675 /* RxCocoa */; };
 		18DBF96E29F94B1F0095A675 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 18DBF96D29F94B1F0095A675 /* RxSwift */; };
@@ -72,9 +74,11 @@
 		189C3CD52A08E4C90091492C /* HomeBestCoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBestCoinCell.swift; sourceTree = "<group>"; };
 		189C3CD72A08E4E10091492C /* HomeTopCoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopCoinCell.swift; sourceTree = "<group>"; };
 		189C3CD92A08E4F90091492C /* HomeFavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFavoriteCell.swift; sourceTree = "<group>"; };
-		189C3CDB2A08E5460091492C /* HomeViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerDataSource.swift; sourceTree = "<group>"; };
-		189C3CDD2A08E5710091492C /* HomeVCLayoutSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCLayoutSections.swift; sourceTree = "<group>"; };
 		189C3CE52A122ED70091492C /* SectionModelCoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModelCoin.swift; sourceTree = "<group>"; };
+		18D5B0A92A24D5630055E841 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		18D5B0AE2A25F1F50055E841 /* HomeConstantsBestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConstantsBestCell.swift; sourceTree = "<group>"; };
+		18D5B0B02A25F2180055E841 /* HomeConstantsTopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConstantsTopCell.swift; sourceTree = "<group>"; };
+		18D5B0B22A25F3240055E841 /* HomeConstantsTopTwentyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConstantsTopTwentyCell.swift; sourceTree = "<group>"; };
 		18DBF98629FBD5E60095A675 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		18DBF98A29FBD7080095A675 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		322C362329F9A11E00A90609 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -150,6 +154,48 @@
 			path = HomeViewCell;
 			sourceTree = "<group>";
 		};
+		18D5B0A52A24D50C0055E841 /* FavoriteModule */ = {
+			isa = PBXGroup;
+			children = (
+				18D5B0A82A24D5460055E841 /* FavoriteViewModel */,
+				18D5B0A72A24D5380055E841 /* FavoriteView */,
+				18D5B0A62A24D52B0055E841 /* FavoriteModel */,
+			);
+			path = FavoriteModule;
+			sourceTree = "<group>";
+		};
+		18D5B0A62A24D52B0055E841 /* FavoriteModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FavoriteModel;
+			sourceTree = "<group>";
+		};
+		18D5B0A72A24D5380055E841 /* FavoriteView */ = {
+			isa = PBXGroup;
+			children = (
+				18D5B0A92A24D5630055E841 /* FavoriteViewController.swift */,
+			);
+			path = FavoriteView;
+			sourceTree = "<group>";
+		};
+		18D5B0A82A24D5460055E841 /* FavoriteViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FavoriteViewModel;
+			sourceTree = "<group>";
+		};
+		18D5B0AB2A25EDD40055E841 /* HomeConstants */ = {
+			isa = PBXGroup;
+			children = (
+				18D5B0AE2A25F1F50055E841 /* HomeConstantsBestCell.swift */,
+				18D5B0B02A25F2180055E841 /* HomeConstantsTopCell.swift */,
+				18D5B0B22A25F3240055E841 /* HomeConstantsTopTwentyCell.swift */,
+			);
+			path = HomeConstants;
+			sourceTree = "<group>";
+		};
 		18DBF98529FBD5D30095A675 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +230,7 @@
 		32151D5629F1CD1F009BAEB9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				18D5B0A52A24D50C0055E841 /* FavoriteModule */,
 				3241098C2A03E43D00473864 /* CoinModule */,
 				32C5518E29FB01E100588C5F /* TabBarModule */,
 				32C5518629FAF2BA00588C5F /* HomeModule */,
@@ -263,6 +310,7 @@
 		32C5518629FAF2BA00588C5F /* HomeModule */ = {
 			isa = PBXGroup;
 			children = (
+				18D5B0AB2A25EDD40055E841 /* HomeConstants */,
 				32C5518729FAF31800588C5F /* HomeModel */,
 				32C5518929FAF32D00588C5F /* HomeView */,
 				32C5518829FAF32200588C5F /* HomeViewModel */,
@@ -293,8 +341,6 @@
 				189C3CD42A08E4AE0091492C /* HomeViewCell */,
 				189C3CD12A08E4920091492C /* HeaderSupplementaryView */,
 				325FD35029F1C7010050B269 /* HomeViewController.swift */,
-				189C3CDB2A08E5460091492C /* HomeViewControllerDataSource.swift */,
-				189C3CDD2A08E5710091492C /* HomeVCLayoutSections.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -572,18 +618,19 @@
 				32A516A22A02E961005662A9 /* MarketViewModel.swift in Sources */,
 				189C3CC82A08E3EF0091492C /* HomeViewModel.swift in Sources */,
 				18DBF98729FBD5E60095A675 /* NetworkManager.swift in Sources */,
+				18D5B0AA2A24D5630055E841 /* FavoriteViewController.swift in Sources */,
 				32A516A62A030DE8005662A9 /* CoinViewController.swift in Sources */,
 				326A4D022A09BC0A001D1820 /* TableViewHeaderFooterViewExtensions.swift in Sources */,
 				189C3CD82A08E4E10091492C /* HomeTopCoinCell.swift in Sources */,
 				32C551A129FB0CFA00588C5F /* XCAssets+Generated.swift in Sources */,
-				189C3CDE2A08E5710091492C /* HomeVCLayoutSections.swift in Sources */,
 				32A516982A02A1A8005662A9 /* NetworkModel.swift in Sources */,
 				189C3CD32A08E49C0091492C /* HeaderSupplementaryView.swift in Sources */,
 				189C3CD62A08E4C90091492C /* HomeBestCoinCell.swift in Sources */,
 				32C5518D29FAFFCE00588C5F /* TabBarViewController.swift in Sources */,
 				325FD35129F1C7010050B269 /* HomeViewController.swift in Sources */,
+				18D5B0AF2A25F1F50055E841 /* HomeConstantsBestCell.swift in Sources */,
 				3262BAB82A099A5600431CDE /* MarketViewHeader.swift in Sources */,
-				189C3CDC2A08E5460091492C /* HomeViewControllerDataSource.swift in Sources */,
+				18D5B0B32A25F3240055E841 /* HomeConstantsTopTwentyCell.swift in Sources */,
 				325FD34D29F1C7010050B269 /* AppDelegate.swift in Sources */,
 				32C5519F29FB089700588C5F /* TradeViewController.swift in Sources */,
 				189C3CDA2A08E4F90091492C /* HomeFavoriteCell.swift in Sources */,
@@ -592,6 +639,7 @@
 				322C362629F9A20F00A90609 /* Strings+Generated.swift in Sources */,
 				18DBF98B29FBD7080095A675 /* NetworkError.swift in Sources */,
 				189C3CD02A08E4750091492C /* HomeModel.swift in Sources */,
+				18D5B0B12A25F2180055E841 /* HomeConstantsTopCell.swift in Sources */,
 				189C3CE62A122ED70091492C /* SectionModelCoin.swift in Sources */,
 				325FD34F29F1C7010050B269 /* SceneDelegate.swift in Sources */,
 				32A5169A2A02C841005662A9 /* MarketViewCell.swift in Sources */,

@@ -8,15 +8,13 @@
 import UIKit
 
 final class CoinViewController: UIViewController {
-
-    var coin: Coin!
     var label = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .lightGray
         label.frame = CGRect(x: 200, y: 200, width: 200, height: 100)
-        label.text = coin.name
+        label.text = "Name"
         view.addSubview(label)
     }
 

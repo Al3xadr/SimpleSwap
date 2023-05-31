@@ -14,7 +14,9 @@ struct HomeCoinModel: Hashable {
     let currentPrice: String
     let priceChange24h: String
     let priceChangePercentage24h: String
-    init(name: String, image: URL, currentPrice: String, priceChange24h: String, priceChangePercentage24h: String, id: String) {
+    let marketCapChangePercentage24h: String
+    init(name: String, image: URL, currentPrice: String,
+         priceChange24h: String, priceChangePercentage24h: String, id: String, marketCapChangePercentage24h: String) {
         self.identifier = UUID()
         self.name = name
         self.image = image
@@ -22,6 +24,7 @@ struct HomeCoinModel: Hashable {
         self.priceChange24h = priceChange24h
         self.priceChangePercentage24h = priceChangePercentage24h
         self.id = id
+        self.marketCapChangePercentage24h = marketCapChangePercentage24h
     }
 }
 extension HomeCoinModel {
