@@ -29,7 +29,12 @@ final class TabBarViewController: UITabBarController {
     }
 
     @objc private func leftBarButtonPressed() {
-        print("open settings")
+        let homeVC = HomeViewController(viewModel: HomeViewModel())
+        let nv = UINavigationController(rootViewController: homeVC)
+        let menuVC = MenuViewController()
+        nv.pushViewController(menuVC, animated: true)
+        self.present(nv, animated: true, completion: nil)
+        print("tapped")
     }
 
     @objc private func sortButton() {
