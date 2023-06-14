@@ -2,7 +2,6 @@
 //  NetworkModel.swift
 //  Simpleswap
 //
-//  Created by Podgainy Sergei on 03.05.2023.
 //
 
 import Foundation
@@ -19,7 +18,7 @@ struct CoinModel: Decodable {
     let ath, athChangePercentage: Double
     let athDate: Date
     let atl, atlChangePercentage: Double
-    let atlDate: Date
+    let atlDate: String
     let roi: Roi?
     let lastUpdated: String
 
