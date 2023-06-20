@@ -12,6 +12,7 @@ final class TabBarViewController: UITabBarController {
     private let market = MarketViewController(viewModel: MarketViewModel())
     private let trade = TradeViewController()
     private let favorite = FavoriteViewController()
+    var coordinator: TabBarCoordinator?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,11 +30,7 @@ final class TabBarViewController: UITabBarController {
     }
 
     @objc private func leftBarButtonPressed() {
-        let homeVC = HomeViewController(viewModel: HomeViewModel())
-        let nv = UINavigationController(rootViewController: homeVC)
-        let menuVC = MenuViewController()
-        nv.pushViewController(menuVC, animated: true)
-        self.present(nv, animated: true, completion: nil)
+        coordinator?.openMenuViewController()
         print("tapped")
     }
 

@@ -14,7 +14,14 @@ final class MenuViewController: UIViewController {
         tableView.delegate = self
         return tableView
     }()
-    
+    private let sceneLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = HomeConstantsBestCell.nameLabel
+        label.text = "Menu"
+        label.textAlignment = .center
+        return label
+    }()
     private lazy var dataSource: UITableViewDiffableDataSource<SectionMenu, MenuModel> = {
         let dataSource = UITableViewDiffableDataSource<SectionMenu, MenuModel>(tableView: tableView) { (tableView, indexPath, item) -> UITableViewCell? in
             if indexPath.section == 1 {
@@ -43,13 +50,20 @@ final class MenuViewController: UIViewController {
     
     private func setupView() {
         view.addSubview(tableView)
+        view.addSubview(sceneLabel)
     }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
+            sceneLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            sceneLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 15),
+            sceneLabel.widthAnchor.constraint(equalToConstant: 200),
+            sceneLabel.heightAnchor.constraint(equalToConstant: 35)
+        ])
+        NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
+            tableView.topAnchor.constraint(equalTo: sceneLabel.safeAreaLayoutGuide.topAnchor, constant: 35),
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
