@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct HomeCoinModel: Hashable {
+struct HomeCoinModel: CoinModelProtocol {
     let identifier: UUID
     let id: String
     let name: String
@@ -27,7 +27,7 @@ struct HomeCoinModel: Hashable {
         self.marketCapChangePercentage24h = marketCapChangePercentage24h
     }
 }
-extension HomeCoinModel {
+extension HomeCoinModel: Hashable {
     func hash(into hasher: inout Hasher) {
         hasher.combine(identifier)
     }
