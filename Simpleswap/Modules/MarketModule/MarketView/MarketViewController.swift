@@ -15,7 +15,7 @@ final class MarketViewController: UIViewController {
     private let tableView = UITableView()
     private let disposeBag = DisposeBag()
     private var shownCoins = [Coin]()
-    var coordinator: MarketCoordinator?
+    //var coordinator: MarketCoordinator?
     init(viewModel: MarketViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)

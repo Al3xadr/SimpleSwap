@@ -6,15 +6,13 @@
 //
 
 import UIKit
-class FavoriteCoordinator: Coordinator {
-    var parentCoordinator: Coordinator?
-    var children: [Coordinator] = []
-    var navigationController: UINavigationController
-    init(navCon: UINavigationController) {
-        self.navigationController = navCon
+final class FavoriteCoordinator: Coordinator {
+    var navigationController: UINavigationController?
+    var childCoordinators: [Coordinator] = []
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
     }
     func start() {
-        print("Favorite Coordinator start")
-        // Set up and present your Favorite view controller here
+        print("FavoriteCoordinator")
     }
 }

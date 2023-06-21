@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 final class FavoriteViewController: UIViewController {
-    var coordinator: FavoriteCoordinator?
+   // var coordinator: FavoriteCoordinator?
     override func viewDidLoad() {
         super.viewDidLoad()
         title = String(describing: Self.self)

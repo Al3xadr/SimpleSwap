@@ -7,7 +7,7 @@
 import UIKit
 
 final class TradeViewController: UIViewController {
-    var coordinator: TradeCoordinator?
+    //var coordinator: TradeCoordinator?
     private let swapLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false

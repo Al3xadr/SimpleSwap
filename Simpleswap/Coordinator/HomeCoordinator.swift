@@ -6,22 +6,26 @@
 //
 
 import UIKit
-class HomeCoordinator: Coordinator {
-    var parentCoordinator: Coordinator?
-    var children: [Coordinator] = []
-    var navigationController: UINavigationController
-    init(navCon: UINavigationController) {
-        self.navigationController = navCon
+
+final class HomeCoordinator: Coordinator, CoinViewControllerDelegate {
+    var navigationController: UINavigationController?
+    private let tabBarController: UITabBarController
+    init(tabBarController: UITabBarController) {
+        self.tabBarController = tabBarController
     }
     func start() {
-        let homeViewModel = HomeViewModel()
-        let homeViewController = HomeViewController(viewModel: homeViewModel)
-        homeViewController.coordinator = self
-        let tabBarController = navigationController.viewControllers.first as? UITabBarController
-        tabBarController?.viewControllers?[0] = homeViewController
+        print("HomeCoordinator")
     }
     func showCoinDetails(coin: HomeCoinModel) {
+        guard let selectedViewController = tabBarController.selectedViewController as? UINavigationController else {
+            return
+        }
         let coinViewController = CoinViewController(coin: coin)
-        navigationController.pushViewController(coinViewController, animated: true)
+        coinViewController.delegate = self
+        coinViewController.modalPresentationStyle = .fullScreen
+        selectedViewController.present(coinViewController, animated: true, completion: nil)
+    }
+    func coinViewControllerDidDismiss() {
+        navigationController?.dismiss(animated: true, completion: nil)
     }
 }

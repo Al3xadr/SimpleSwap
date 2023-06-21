@@ -216,7 +216,7 @@ extension HomeViewController {
 }
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let selectedCoin = dataSource.itemIdentifier(for: indexPath) else { return}
+        guard let selectedCoin = dataSource.itemIdentifier(for: indexPath) else { return }
         coordinator?.showCoinDetails(coin: selectedCoin)
     }
 }

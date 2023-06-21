@@ -67,13 +67,5 @@ final class TabBarViewController: UITabBarController {
             action: #selector(sortButton)
         )
         rightBarButton.tintColor = .black
-
-        switch item.title {
-        case "Home": navigationItem.rightBarButtonItem = .none
-        case "Market": navigationItem.rightBarButtonItem = rightBarButton
-        case "Favorite": navigationItem.rightBarButtonItem = rightBarButton
-        case "Trade": navigationItem.rightBarButtonItem = .none
-        default: print("none")
-        }
     }
 }
