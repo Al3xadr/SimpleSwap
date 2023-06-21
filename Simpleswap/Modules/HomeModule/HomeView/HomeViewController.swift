@@ -14,6 +14,7 @@ final class HomeViewController: UIViewController {
     fileprivate typealias DataSourceSnapshot = NSDiffableDataSourceSnapshot<SectionModelCoin, HomeCoinModel>
     private lazy var dataSource = makeDataSource()
     private let section = SectionModelCoin.allCases
+    var coordinator: HomeCoordinator?
     init(viewModel: HomeViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -27,7 +28,8 @@ final class HomeViewController: UIViewController {
         collectionView.register(HomeTopCoinCell.self, forCellWithReuseIdentifier: Constants.topCell)
         collectionView.register(HomeFavoriteCell.self, forCellWithReuseIdentifier: Constants.topTwentyCell)
         collectionView.register(HeaderSupplementaryView.self, forSupplementaryViewOfKind:
-                                    UICollectionView.elementKindSectionHeader, withReuseIdentifier: Constants.collectionHeader)
+                                    UICollectionView.elementKindSectionHeader,
+                                    withReuseIdentifier: Constants.collectionHeader)
         return collectionView
     }()
     required init?(coder: NSCoder) {
@@ -41,6 +43,7 @@ final class HomeViewController: UIViewController {
         tabBarItem.image = Asset.home.image
         tabBarItem.title = Constants.home
         collectionView.dataSource = self.dataSource
+        collectionView.delegate = self
         setupView()
         setupContraints()
         viewModel.getCoinData()
@@ -209,5 +212,11 @@ extension HomeViewController {
         snapshot.appendItems(topFiveCoinSnapshotSection, toSection: .topCoin)
         snapshot.appendItems(topTwentyCoinSnapshotSection, toSection: .topTwentyCoin)
         dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
+    }
+}
+extension HomeViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let selectedCoin = dataSource.itemIdentifier(for: indexPath) else { return }
+        coordinator?.showCoinDetails(coin: selectedCoin)
     }
 }

@@ -6,7 +6,7 @@
 
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
@@ -19,8 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     private func makeNavigationController() -> UINavigationController {
-        let tabBarView = TabBarViewController()
-        let navigationController = UINavigationController(rootViewController: tabBarView)
+        let navigationController = UINavigationController()
+        let appCoordinator = AppCoordinator(navigationController: navigationController)
+        appCoordinator.start()
         return navigationController
     }
 }

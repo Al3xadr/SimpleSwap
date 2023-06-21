@@ -15,7 +15,7 @@ final class MarketViewController: UIViewController {
     private let tableView = UITableView()
     private let disposeBag = DisposeBag()
     private var shownCoins = [Coin]()
-    
+    //var coordinator: MarketCoordinator?
     init(viewModel: MarketViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -78,8 +78,9 @@ extension MarketViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = CoinViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        guard indexPath.row < shownCoins.count else { return }
+            let selectedCoin = shownCoins[indexPath.row]
+           // coordinator?.showCoinDetails(coin: selectedCoin)
     }
 }
 

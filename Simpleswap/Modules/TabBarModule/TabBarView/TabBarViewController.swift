@@ -12,6 +12,7 @@ final class TabBarViewController: UITabBarController {
     private let market = MarketViewController(viewModel: MarketViewModel())
     private let trade = TradeViewController()
     private let favorite = FavoriteViewController()
+    var coordinator: TabBarCoordinator?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,7 +30,8 @@ final class TabBarViewController: UITabBarController {
     }
 
     @objc private func leftBarButtonPressed() {
-        print("open settings")
+        coordinator?.openMenuViewController()
+        print("tapped")
     }
 
     @objc private func sortButton() {
@@ -65,13 +67,5 @@ final class TabBarViewController: UITabBarController {
             action: #selector(sortButton)
         )
         rightBarButton.tintColor = .black
-
-        switch item.title {
-        case "Home": navigationItem.rightBarButtonItem = .none
-        case "Market": navigationItem.rightBarButtonItem = rightBarButton
-        case "Favorite": navigationItem.rightBarButtonItem = rightBarButton
-        case "Trade": navigationItem.rightBarButtonItem = .none
-        default: print("none")
-        }
     }
 }

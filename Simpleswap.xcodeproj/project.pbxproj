@@ -7,8 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		180FDCF42A1CC7980026D9ED /* Extension+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FDCF32A1CC7980026D9ED /* Extension+Array.swift */; };
 		180FDCF62A1F5F930026D9ED /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FDCF52A1F5F930026D9ED /* NetworkConstants.swift */; };
+		1880263E2A39B90600E3466F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880263D2A39B90600E3466F /* MenuViewController.swift */; };
+		188026412A39C04300E3466F /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188026402A39C04300E3466F /* MenuTableViewCell.swift */; };
+		188026432A39C41000E3466F /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188026422A39C41000E3466F /* MenuModel.swift */; };
+		188026452A39C50600E3466F /* SectionMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188026442A39C50600E3466F /* SectionMenu.swift */; };
+		188026472A39CBE300E3466F /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188026462A39CBE300E3466F /* SwitchTableViewCell.swift */; };
+		1880264C2A405A9500E3466F /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880264B2A405A9500E3466F /* CoordinatorProtocol.swift */; };
+		188026512A4061A000E3466F /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188026502A4061A000E3466F /* HomeCoordinator.swift */; };
+		188026532A406D7700E3466F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188026522A406D7700E3466F /* AppCoordinator.swift */; };
+		188026552A4071F600E3466F /* MarketCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188026542A4071F600E3466F /* MarketCoordinator.swift */; };
+		188026572A40720900E3466F /* TradeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188026562A40720900E3466F /* TradeCoordinator.swift */; };
+		188026592A40721B00E3466F /* FavoriteCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188026582A40721B00E3466F /* FavoriteCoordinator.swift */; };
+		1880265B2A40953F00E3466F /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880265A2A40953F00E3466F /* TabBarCoordinator.swift */; };
+		188026602A40A4FB00E3466F /* ModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880265F2A40A4FB00E3466F /* ModelProtocol.swift */; };
 		189C3CC82A08E3EF0091492C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CC72A08E3EF0091492C /* HomeViewModel.swift */; };
 		189C3CD02A08E4750091492C /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CCF2A08E4750091492C /* HomeModel.swift */; };
 		189C3CD32A08E49C0091492C /* HeaderSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CD22A08E49C0091492C /* HeaderSupplementaryView.swift */; };
@@ -66,8 +78,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		180FDCF32A1CC7980026D9ED /* Extension+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Array.swift"; sourceTree = "<group>"; };
 		180FDCF52A1F5F930026D9ED /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		1880263D2A39B90600E3466F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		188026402A39C04300E3466F /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		188026422A39C41000E3466F /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
+		188026442A39C50600E3466F /* SectionMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionMenu.swift; sourceTree = "<group>"; };
+		188026462A39CBE300E3466F /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		1880264B2A405A9500E3466F /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		188026502A4061A000E3466F /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		188026522A406D7700E3466F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		188026542A4071F600E3466F /* MarketCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCoordinator.swift; sourceTree = "<group>"; };
+		188026562A40720900E3466F /* TradeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeCoordinator.swift; sourceTree = "<group>"; };
+		188026582A40721B00E3466F /* FavoriteCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCoordinator.swift; sourceTree = "<group>"; };
+		1880265A2A40953F00E3466F /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		1880265F2A40A4FB00E3466F /* ModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProtocol.swift; sourceTree = "<group>"; };
 		189C3CC72A08E3EF0091492C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		189C3CCF2A08E4750091492C /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		189C3CD22A08E49C0091492C /* HeaderSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSupplementaryView.swift; sourceTree = "<group>"; };
@@ -136,6 +160,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		188026392A39B8C400E3466F /* MenuModule */ = {
+			isa = PBXGroup;
+			children = (
+				1880263C2A39B8EA00E3466F /* MenuView */,
+				1880263B2A39B8E200E3466F /* MenuModel */,
+				1880263A2A39B8D600E3466F /* MenuViewModel */,
+			);
+			path = MenuModule;
+			sourceTree = "<group>";
+		};
+		1880263A2A39B8D600E3466F /* MenuViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MenuViewModel;
+			sourceTree = "<group>";
+		};
+		1880263B2A39B8E200E3466F /* MenuModel */ = {
+			isa = PBXGroup;
+			children = (
+				188026422A39C41000E3466F /* MenuModel.swift */,
+				188026442A39C50600E3466F /* SectionMenu.swift */,
+			);
+			path = MenuModel;
+			sourceTree = "<group>";
+		};
+		1880263C2A39B8EA00E3466F /* MenuView */ = {
+			isa = PBXGroup;
+			children = (
+				1880263F2A39C02F00E3466F /* TableViewCell */,
+				1880263D2A39B90600E3466F /* MenuViewController.swift */,
+			);
+			path = MenuView;
+			sourceTree = "<group>";
+		};
+		1880263F2A39C02F00E3466F /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				188026402A39C04300E3466F /* MenuTableViewCell.swift */,
+				188026462A39CBE300E3466F /* SwitchTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		188026482A4059BB00E3466F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				1880264D2A405A9B00E3466F /* CoordinatorProtocol */,
+				188026522A406D7700E3466F /* AppCoordinator.swift */,
+				1880265A2A40953F00E3466F /* TabBarCoordinator.swift */,
+				188026502A4061A000E3466F /* HomeCoordinator.swift */,
+				188026542A4071F600E3466F /* MarketCoordinator.swift */,
+				188026562A40720900E3466F /* TradeCoordinator.swift */,
+				188026582A40721B00E3466F /* FavoriteCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		1880264D2A405A9B00E3466F /* CoordinatorProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				1880264B2A405A9500E3466F /* CoordinatorProtocol.swift */,
+			);
+			path = CoordinatorProtocol;
+			sourceTree = "<group>";
+		};
+		1880265E2A40A4E600E3466F /* ModelProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				1880265F2A40A4FB00E3466F /* ModelProtocol.swift */,
+			);
+			path = ModelProtocol;
+			sourceTree = "<group>";
+		};
 		189C3CD12A08E4920091492C /* HeaderSupplementaryView */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +328,8 @@
 		32151D5629F1CD1F009BAEB9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				1880265E2A40A4E600E3466F /* ModelProtocol */,
+				188026392A39B8C400E3466F /* MenuModule */,
 				18D5B0A52A24D50C0055E841 /* FavoriteModule */,
 				3241098C2A03E43D00473864 /* CoinModule */,
 				32C5518E29FB01E100588C5F /* TabBarModule */,
@@ -272,8 +372,9 @@
 			children = (
 				32A5169B2A02C88B005662A9 /* Extensions */,
 				18DBF98529FBD5D30095A675 /* Network */,
-				32151D5429F1CB22009BAEB9 /* App */,
 				32151D5629F1CD1F009BAEB9 /* Modules */,
+				32151D5429F1CB22009BAEB9 /* App */,
+				188026482A4059BB00E3466F /* Coordinator */,
 				32151D5529F1CB38009BAEB9 /* Support */,
 			);
 			path = Simpleswap;
@@ -302,7 +403,6 @@
 			children = (
 				32A5169C2A02C8A4005662A9 /* TableViewCellExtensions.swift */,
 				326A4D012A09BC0A001D1820 /* TableViewHeaderFooterViewExtensions.swift */,
-				180FDCF32A1CC7980026D9ED /* Extension+Array.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -617,14 +717,21 @@
 				180FDCF62A1F5F930026D9ED /* NetworkConstants.swift in Sources */,
 				32A516A22A02E961005662A9 /* MarketViewModel.swift in Sources */,
 				189C3CC82A08E3EF0091492C /* HomeViewModel.swift in Sources */,
+				188026592A40721B00E3466F /* FavoriteCoordinator.swift in Sources */,
 				18DBF98729FBD5E60095A675 /* NetworkManager.swift in Sources */,
 				18D5B0AA2A24D5630055E841 /* FavoriteViewController.swift in Sources */,
+				188026472A39CBE300E3466F /* SwitchTableViewCell.swift in Sources */,
 				32A516A62A030DE8005662A9 /* CoinViewController.swift in Sources */,
 				326A4D022A09BC0A001D1820 /* TableViewHeaderFooterViewExtensions.swift in Sources */,
+				188026512A4061A000E3466F /* HomeCoordinator.swift in Sources */,
+				1880263E2A39B90600E3466F /* MenuViewController.swift in Sources */,
 				189C3CD82A08E4E10091492C /* HomeTopCoinCell.swift in Sources */,
 				32C551A129FB0CFA00588C5F /* XCAssets+Generated.swift in Sources */,
 				32A516982A02A1A8005662A9 /* NetworkModel.swift in Sources */,
+				188026572A40720900E3466F /* TradeCoordinator.swift in Sources */,
 				189C3CD32A08E49C0091492C /* HeaderSupplementaryView.swift in Sources */,
+				188026532A406D7700E3466F /* AppCoordinator.swift in Sources */,
+				188026452A39C50600E3466F /* SectionMenu.swift in Sources */,
 				189C3CD62A08E4C90091492C /* HomeBestCoinCell.swift in Sources */,
 				32C5518D29FAFFCE00588C5F /* TabBarViewController.swift in Sources */,
 				325FD35129F1C7010050B269 /* HomeViewController.swift in Sources */,
@@ -634,7 +741,10 @@
 				325FD34D29F1C7010050B269 /* AppDelegate.swift in Sources */,
 				32C5519F29FB089700588C5F /* TradeViewController.swift in Sources */,
 				189C3CDA2A08E4F90091492C /* HomeFavoriteCell.swift in Sources */,
+				1880264C2A405A9500E3466F /* CoordinatorProtocol.swift in Sources */,
 				32A516A42A02F2D5005662A9 /* MarketModel.swift in Sources */,
+				188026432A39C41000E3466F /* MenuModel.swift in Sources */,
+				188026552A4071F600E3466F /* MarketCoordinator.swift in Sources */,
 				32A5169D2A02C8A4005662A9 /* TableViewCellExtensions.swift in Sources */,
 				322C362629F9A20F00A90609 /* Strings+Generated.swift in Sources */,
 				18DBF98B29FBD7080095A675 /* NetworkError.swift in Sources */,
@@ -642,9 +752,11 @@
 				18D5B0B12A25F2180055E841 /* HomeConstantsTopCell.swift in Sources */,
 				189C3CE62A122ED70091492C /* SectionModelCoin.swift in Sources */,
 				325FD34F29F1C7010050B269 /* SceneDelegate.swift in Sources */,
+				1880265B2A40953F00E3466F /* TabBarCoordinator.swift in Sources */,
 				32A5169A2A02C841005662A9 /* MarketViewCell.swift in Sources */,
-				180FDCF42A1CC7980026D9ED /* Extension+Array.swift in Sources */,
 				32C5519429FB028C00588C5F /* MarketViewController.swift in Sources */,
+				188026602A40A4FB00E3466F /* ModelProtocol.swift in Sources */,
+				188026412A39C04300E3466F /* MenuTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

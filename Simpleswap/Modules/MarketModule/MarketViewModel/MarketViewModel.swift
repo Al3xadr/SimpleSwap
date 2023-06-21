@@ -49,7 +49,7 @@ final class MarketViewModel: MarketViewModelProtocol {
                 image: urlPic,
                 name: coinsData[coin].name,
                 symbol: coinsData[coin].symbol.uppercased(),
-                price: "$\(coinsData[coin].currentPrice)",
+                currentPrice: "$\(coinsData[coin].currentPrice)",
                 change: String(coinsData[coin].priceChangePercentage24H),
                 cap: "$" + String(coinsData[coin].marketCap),
                 vol: String(coinsData[coin].totalVolume)

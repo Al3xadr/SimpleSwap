@@ -42,7 +42,7 @@ final class MarketViewCell: UITableViewCell {
         coinImage.kf.setImage(with: coin.image)
         coinNameLabel.text = coin.name
         symbolLabel.text = coin.symbol
-        priceLabel.text = coin.price
+        priceLabel.text = coin.currentPrice
         changeLabel.text = coin.change
         capLabel.text = coin.cap
         volLabel.text = coin.vol
