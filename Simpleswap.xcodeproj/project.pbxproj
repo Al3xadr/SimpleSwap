@@ -20,7 +20,6 @@
 		188026572A40720900E3466F /* TradeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188026562A40720900E3466F /* TradeCoordinator.swift */; };
 		188026592A40721B00E3466F /* FavoriteCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188026582A40721B00E3466F /* FavoriteCoordinator.swift */; };
 		1880265B2A40953F00E3466F /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880265A2A40953F00E3466F /* TabBarCoordinator.swift */; };
-		188026602A40A4FB00E3466F /* ModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880265F2A40A4FB00E3466F /* ModelProtocol.swift */; };
 		189C3CC82A08E3EF0091492C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CC72A08E3EF0091492C /* HomeViewModel.swift */; };
 		189C3CD02A08E4750091492C /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CCF2A08E4750091492C /* HomeModel.swift */; };
 		189C3CD32A08E49C0091492C /* HeaderSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CD22A08E49C0091492C /* HeaderSupplementaryView.swift */; };
@@ -91,7 +90,6 @@
 		188026562A40720900E3466F /* TradeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeCoordinator.swift; sourceTree = "<group>"; };
 		188026582A40721B00E3466F /* FavoriteCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCoordinator.swift; sourceTree = "<group>"; };
 		1880265A2A40953F00E3466F /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
-		1880265F2A40A4FB00E3466F /* ModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProtocol.swift; sourceTree = "<group>"; };
 		189C3CC72A08E3EF0091492C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		189C3CCF2A08E4750091492C /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		189C3CD22A08E49C0091492C /* HeaderSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSupplementaryView.swift; sourceTree = "<group>"; };
@@ -226,14 +224,6 @@
 			path = CoordinatorProtocol;
 			sourceTree = "<group>";
 		};
-		1880265E2A40A4E600E3466F /* ModelProtocol */ = {
-			isa = PBXGroup;
-			children = (
-				1880265F2A40A4FB00E3466F /* ModelProtocol.swift */,
-			);
-			path = ModelProtocol;
-			sourceTree = "<group>";
-		};
 		189C3CD12A08E4920091492C /* HeaderSupplementaryView */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,7 +318,6 @@
 		32151D5629F1CD1F009BAEB9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				1880265E2A40A4E600E3466F /* ModelProtocol */,
 				188026392A39B8C400E3466F /* MenuModule */,
 				18D5B0A52A24D50C0055E841 /* FavoriteModule */,
 				3241098C2A03E43D00473864 /* CoinModule */,
@@ -755,7 +744,6 @@
 				1880265B2A40953F00E3466F /* TabBarCoordinator.swift in Sources */,
 				32A5169A2A02C841005662A9 /* MarketViewCell.swift in Sources */,
 				32C5519429FB028C00588C5F /* MarketViewController.swift in Sources */,
-				188026602A40A4FB00E3466F /* ModelProtocol.swift in Sources */,
 				188026412A39C04300E3466F /* MenuTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

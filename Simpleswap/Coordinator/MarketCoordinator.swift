@@ -5,13 +5,25 @@
 //  Created by apple on 19.06.2023.
 //
 import UIKit
-final class MarketCoordinator: Coordinator {
+final class MarketCoordinator: Coordinator, CoinViewControllerDelegate {
     var navigationController: UINavigationController?
-    var childCoordinators: [Coordinator] = []
-    init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
+    private let tabBarController: UITabBarController
+    init(tabBarController: UITabBarController) {
+        self.tabBarController = tabBarController
     }
     func start() {
         print("MarketCoordinator")
+    }
+    func showCoinDetails(coin: CoinModel) {
+        guard let selectedViewController = tabBarController.selectedViewController as? UINavigationController else {
+            return
+        }
+        let coinViewController = CoinViewController(coin: coin)
+        coinViewController.delegate = self
+        coinViewController.modalPresentationStyle = .fullScreen
+        selectedViewController.present(coinViewController, animated: true, completion: nil)
+    }
+    func coinViewControllerDidDismiss() {
+        navigationController?.dismiss(animated: true, completion: nil)
     }
 }

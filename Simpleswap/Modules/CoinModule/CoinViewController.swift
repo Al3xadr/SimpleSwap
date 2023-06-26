@@ -20,16 +20,13 @@ final class CoinViewController: UIViewController {
         button.backgroundColor = .blue
         return button
     }()
-    
-    init(coin: HomeCoinModel) {
+    init(coin: CoinModel) {
         self.name = coin.name
         super.init(nibName: nil, bundle: nil)
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .lightGray
@@ -38,13 +35,10 @@ final class CoinViewController: UIViewController {
         view.addSubview(label)
         setupView()
         setupConstraints()
-        
         dismissButton.addTarget(self, action: #selector(dismissButtonTapped), for: .touchUpInside)
     }
-    
     @objc private func dismissButtonTapped() {
         delegate?.coinViewControllerDidDismiss()
-        dismiss(animated: true, completion: nil)
     }
 }
 
@@ -52,7 +46,6 @@ extension CoinViewController {
     func setupView() {
         view.addSubview(dismissButton)
     }
-    
     func setupConstraints() {
         NSLayoutConstraint.activate([
             dismissButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
