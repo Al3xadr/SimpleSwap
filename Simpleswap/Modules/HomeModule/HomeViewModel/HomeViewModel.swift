@@ -42,7 +42,6 @@ class HomeViewModel: HomeViewModelProtocol {
             .disposed(by: disposeBag)
     }
     private func fetchCoins() {
-        var coins = [HomeCoinModel]()
         for coin in coinsData {
             guard let urlPic = URL(string: coin.image) else { return }
             let coinModel = CoinModel(
@@ -84,6 +83,5 @@ class HomeViewModel: HomeViewModelProtocol {
                 coinModel: coinModel
             ))
         }
-        self.coins = coins
     }
 }
