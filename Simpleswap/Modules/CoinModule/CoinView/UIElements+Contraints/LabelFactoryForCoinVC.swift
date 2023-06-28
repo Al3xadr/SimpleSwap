@@ -6,7 +6,7 @@
 //
 
 import UIKit
-class LabelFactoryCoinVC {
+final class LabelFactoryCoinVC {
     static func createDismissButton() -> UIButton {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false

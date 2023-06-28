@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LayoutConstraintsCoinVC {
+final class LayoutConstraintsCoinVC {
     static func activateConstraintsForHeader(for coinViewController: CoinViewController, dismissButton: UIButton, nameLabel: UILabel) {
         NSLayoutConstraint.activate([
             dismissButton.leadingAnchor.constraint(equalTo: coinViewController.view.leadingAnchor, constant: 5),
