@@ -16,7 +16,7 @@ final class HomeCoordinator: Coordinator, CoinViewControllerDelegate {
     func start() {
         print("HomeCoordinator")
     }
-    func showCoinDetails(coin: HomeCoinModel) {
+    func showCoinDetails(coin: CoinModel) {
         guard let selectedViewController = tabBarController.selectedViewController as? UINavigationController else {
             return
         }

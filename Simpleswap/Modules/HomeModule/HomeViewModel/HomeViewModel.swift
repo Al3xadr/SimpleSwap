@@ -42,9 +42,36 @@ class HomeViewModel: HomeViewModelProtocol {
             .disposed(by: disposeBag)
     }
     private func fetchCoins() {
-        var coins = [HomeCoinModel]()
         for coin in coinsData {
             guard let urlPic = URL(string: coin.image) else { return }
+            let coinModel = CoinModel(
+                id: coin.id,
+                symbol: coin.symbol,
+                name: coin.name,
+                image: coin.image,
+                currentPrice: coin.currentPrice,
+                marketCap: coin.marketCap,
+                marketCapRank: coin.marketCapRank,
+                fullyDilutedValuation: coin.fullyDilutedValuation,
+                totalVolume: coin.totalVolume,
+                high24H: coin.high24H,
+                low24H: coin.low24H,
+                priceChange24H: coin.priceChange24H,
+                priceChangePercentage24H: coin.priceChangePercentage24H,
+                marketCapChange24H: coin.marketCapChange24H,
+                marketCapChangePercentage24H: coin.marketCapChangePercentage24H,
+                circulatingSupply: coin.circulatingSupply,
+                totalSupply: coin.totalSupply,
+                maxSupply: coin.maxSupply,
+                ath: coin.ath,
+                athChangePercentage: coin.athChangePercentage,
+                athDate: coin.athDate,
+                atl: coin.atl,
+                atlChangePercentage: coin.atlChangePercentage,
+                atlDate: coin.atlDate,
+                roi: coin.roi,
+                lastUpdated: coin.lastUpdated
+            )
             coins.append(HomeCoinModel(
                 name: coin.name,
                 image: urlPic,
@@ -52,9 +79,9 @@ class HomeViewModel: HomeViewModelProtocol {
                 priceChange24h: String(format: "%.03f", coin.priceChange24H) + "$",
                 priceChangePercentage24h: "$ " + String(format: "%.03f", coin.priceChangePercentage24H) + "%",
                 id: coin.symbol.uppercased(),
-                marketCapChangePercentage24h: String(format: "%.03f", coin.marketCapChangePercentage24H) + ":"
+                marketCapChangePercentage24h: String(format: "%.03f", coin.marketCapChangePercentage24H) + ":",
+                coinModel: coinModel
             ))
         }
-        self.coins = coins
     }
 }

@@ -9,22 +9,12 @@ import UIKit
 
 class SwitchTableViewCell: UITableViewCell {
     var switchValueChangeHandler: ((Bool) -> Void)?
-    
+    private let switchView = LabelFactoryForSwitchCell.createSwitchView()
+    internal let nameLabel = LabelFactoryForSwitchCell.createNameLabel()
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        let switchView = UISwitch()
-        switchView.translatesAutoresizingMaskIntoConstraints = false
-        switchView.addTarget(self, action: #selector(switchValueChanged(_:)), for: .valueChanged)
-        
-        contentView.addSubview(switchView)
-        accessoryView = UIView()
-
-        NSLayoutConstraint.activate([
-            switchView.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor),
-            switchView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
-        ])
-        selectionStyle = .none
+        setupView()
+        setupContraints()
     }
     
     required init?(coder: NSCoder) {
@@ -33,5 +23,14 @@ class SwitchTableViewCell: UITableViewCell {
     
     @objc private func switchValueChanged(_ sender: UISwitch) {
         switchValueChangeHandler?(sender.isOn)
+    }
+}
+private extension SwitchTableViewCell {
+    func setupView() {
+        contentView.addSubview(nameLabel)
+        contentView.addSubview(switchView)
+    }
+    func setupContraints() {
+        LayoutContraintsSwitchCell.activateConstraintsForSwitchCell(for: self, nameLabel: nameLabel, switchView: switchView)
     }
 }
