@@ -51,9 +51,13 @@ final class TabBarCoordinator: Coordinator {
         homeCoordinator.navigationController = homeNavigationController
         homeViewController.coordinator = homeCoordinator
         
+        let marketCoordinator = MarketCoordinator(tabBarController: tabBarController)
+        marketCoordinator.navigationController = homeNavigationController
+        marketViewController.coordinator = marketCoordinator
+        
         childCoordinators = [
             homeCoordinator,
-            MarketCoordinator(navigationController: marketNavigationController),
+            marketCoordinator,
             TradeCoordinator(navigationController: tradeNavigationController),
             FavoriteCoordinator(navigationController: favoriteNavigationController)
         ]

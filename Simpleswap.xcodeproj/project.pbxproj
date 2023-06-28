@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		180FDCF62A1F5F930026D9ED /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FDCF52A1F5F930026D9ED /* NetworkConstants.swift */; };
 		1880263E2A39B90600E3466F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880263D2A39B90600E3466F /* MenuViewController.swift */; };
-		188026412A39C04300E3466F /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188026402A39C04300E3466F /* MenuTableViewCell.swift */; };
+		188026412A39C04300E3466F /* SegmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188026402A39C04300E3466F /* SegmentTableViewCell.swift */; };
 		188026432A39C41000E3466F /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188026422A39C41000E3466F /* MenuModel.swift */; };
 		188026452A39C50600E3466F /* SectionMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188026442A39C50600E3466F /* SectionMenu.swift */; };
 		188026472A39CBE300E3466F /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188026462A39CBE300E3466F /* SwitchTableViewCell.swift */; };
@@ -20,7 +20,6 @@
 		188026572A40720900E3466F /* TradeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188026562A40720900E3466F /* TradeCoordinator.swift */; };
 		188026592A40721B00E3466F /* FavoriteCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188026582A40721B00E3466F /* FavoriteCoordinator.swift */; };
 		1880265B2A40953F00E3466F /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880265A2A40953F00E3466F /* TabBarCoordinator.swift */; };
-		188026602A40A4FB00E3466F /* ModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880265F2A40A4FB00E3466F /* ModelProtocol.swift */; };
 		189C3CC82A08E3EF0091492C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CC72A08E3EF0091492C /* HomeViewModel.swift */; };
 		189C3CD02A08E4750091492C /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CCF2A08E4750091492C /* HomeModel.swift */; };
 		189C3CD32A08E49C0091492C /* HeaderSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CD22A08E49C0091492C /* HeaderSupplementaryView.swift */; };
@@ -37,6 +36,16 @@
 		18DBF96E29F94B1F0095A675 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 18DBF96D29F94B1F0095A675 /* RxSwift */; };
 		18DBF98729FBD5E60095A675 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBF98629FBD5E60095A675 /* NetworkManager.swift */; };
 		18DBF98B29FBD7080095A675 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBF98A29FBD7080095A675 /* NetworkError.swift */; };
+		18E61AC02A4C4FB1006E007A /* LabelFactoryForCoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E61ABF2A4C4FB1006E007A /* LabelFactoryForCoinVC.swift */; };
+		18E61AC22A4C4FD4006E007A /* LayoutContraintsCoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E61AC12A4C4FD4006E007A /* LayoutContraintsCoinVC.swift */; };
+		18E61AC62A4C5B53006E007A /* LabelFactoryForSegmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E61AC52A4C5B53006E007A /* LabelFactoryForSegmentCell.swift */; };
+		18E61AC82A4C5B7C006E007A /* LayoutContraintsSegmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E61AC72A4C5B7C006E007A /* LayoutContraintsSegmentCell.swift */; };
+		18E61ACE2A4C5ECD006E007A /* LayoutContraintsSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E61ACD2A4C5ECD006E007A /* LayoutContraintsSwitchCell.swift */; };
+		18E61AD02A4C5F35006E007A /* LabelFactorySwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E61ACF2A4C5F35006E007A /* LabelFactorySwitchCell.swift */; };
+		18E61AD32A4C6183006E007A /* LabelFactoryMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E61AD22A4C6183006E007A /* LabelFactoryMenu.swift */; };
+		18E61AD52A4C619B006E007A /* LayoutContraintsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E61AD42A4C619B006E007A /* LayoutContraintsMenu.swift */; };
+		18E61AD82A4C6504006E007A /* LabelFactoryHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E61AD72A4C6504006E007A /* LabelFactoryHeader.swift */; };
+		18E61ADA2A4C652F006E007A /* LayoutContraintsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E61AD92A4C652F006E007A /* LayoutContraintsHeader.swift */; };
 		322C362429F9A11E00A90609 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 322C362329F9A11E00A90609 /* Localizable.strings */; };
 		322C362629F9A20F00A90609 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322C362529F9A20F00A90609 /* Strings+Generated.swift */; };
 		325FD34D29F1C7010050B269 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325FD34C29F1C7010050B269 /* AppDelegate.swift */; };
@@ -80,7 +89,7 @@
 /* Begin PBXFileReference section */
 		180FDCF52A1F5F930026D9ED /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		1880263D2A39B90600E3466F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		188026402A39C04300E3466F /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		188026402A39C04300E3466F /* SegmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentTableViewCell.swift; sourceTree = "<group>"; };
 		188026422A39C41000E3466F /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		188026442A39C50600E3466F /* SectionMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionMenu.swift; sourceTree = "<group>"; };
 		188026462A39CBE300E3466F /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
@@ -91,7 +100,6 @@
 		188026562A40720900E3466F /* TradeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeCoordinator.swift; sourceTree = "<group>"; };
 		188026582A40721B00E3466F /* FavoriteCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCoordinator.swift; sourceTree = "<group>"; };
 		1880265A2A40953F00E3466F /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
-		1880265F2A40A4FB00E3466F /* ModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProtocol.swift; sourceTree = "<group>"; };
 		189C3CC72A08E3EF0091492C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		189C3CCF2A08E4750091492C /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		189C3CD22A08E49C0091492C /* HeaderSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSupplementaryView.swift; sourceTree = "<group>"; };
@@ -105,6 +113,16 @@
 		18D5B0B22A25F3240055E841 /* HomeConstantsTopTwentyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConstantsTopTwentyCell.swift; sourceTree = "<group>"; };
 		18DBF98629FBD5E60095A675 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		18DBF98A29FBD7080095A675 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		18E61ABF2A4C4FB1006E007A /* LabelFactoryForCoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactoryForCoinVC.swift; sourceTree = "<group>"; };
+		18E61AC12A4C4FD4006E007A /* LayoutContraintsCoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutContraintsCoinVC.swift; sourceTree = "<group>"; };
+		18E61AC52A4C5B53006E007A /* LabelFactoryForSegmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactoryForSegmentCell.swift; sourceTree = "<group>"; };
+		18E61AC72A4C5B7C006E007A /* LayoutContraintsSegmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutContraintsSegmentCell.swift; sourceTree = "<group>"; };
+		18E61ACD2A4C5ECD006E007A /* LayoutContraintsSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutContraintsSwitchCell.swift; sourceTree = "<group>"; };
+		18E61ACF2A4C5F35006E007A /* LabelFactorySwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactorySwitchCell.swift; sourceTree = "<group>"; };
+		18E61AD22A4C6183006E007A /* LabelFactoryMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactoryMenu.swift; sourceTree = "<group>"; };
+		18E61AD42A4C619B006E007A /* LayoutContraintsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutContraintsMenu.swift; sourceTree = "<group>"; };
+		18E61AD72A4C6504006E007A /* LabelFactoryHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactoryHeader.swift; sourceTree = "<group>"; };
+		18E61AD92A4C652F006E007A /* LayoutContraintsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutContraintsHeader.swift; sourceTree = "<group>"; };
 		322C362329F9A11E00A90609 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		322C362529F9A20F00A90609 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		325FD34929F1C7010050B269 /* Simpleswap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simpleswap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,7 +216,8 @@
 		1880263F2A39C02F00E3466F /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				188026402A39C04300E3466F /* MenuTableViewCell.swift */,
+				18E61AC42A4C5B27006E007A /* FactoryView */,
+				188026402A39C04300E3466F /* SegmentTableViewCell.swift */,
 				188026462A39CBE300E3466F /* SwitchTableViewCell.swift */,
 			);
 			path = TableViewCell;
@@ -224,14 +243,6 @@
 				1880264B2A405A9500E3466F /* CoordinatorProtocol.swift */,
 			);
 			path = CoordinatorProtocol;
-			sourceTree = "<group>";
-		};
-		1880265E2A40A4E600E3466F /* ModelProtocol */ = {
-			isa = PBXGroup;
-			children = (
-				1880265F2A40A4FB00E3466F /* ModelProtocol.swift */,
-			);
-			path = ModelProtocol;
 			sourceTree = "<group>";
 		};
 		189C3CD12A08E4920091492C /* HeaderSupplementaryView */ = {
@@ -303,6 +314,62 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		18E61ABE2A4C4F96006E007A /* FactoryView */ = {
+			isa = PBXGroup;
+			children = (
+				18E61ABF2A4C4FB1006E007A /* LabelFactoryForCoinVC.swift */,
+				18E61AC12A4C4FD4006E007A /* LayoutContraintsCoinVC.swift */,
+			);
+			path = FactoryView;
+			sourceTree = "<group>";
+		};
+		18E61AC42A4C5B27006E007A /* FactoryView */ = {
+			isa = PBXGroup;
+			children = (
+				18E61AD62A4C64E0006E007A /* HeaderUIElement */,
+				18E61AD12A4C615D006E007A /* MenuUIElement */,
+				18E61ACA2A4C5E65006E007A /* SegmentUIElement */,
+				18E61AC92A4C5E44006E007A /* SwitchUIElement */,
+			);
+			path = FactoryView;
+			sourceTree = "<group>";
+		};
+		18E61AC92A4C5E44006E007A /* SwitchUIElement */ = {
+			isa = PBXGroup;
+			children = (
+				18E61ACD2A4C5ECD006E007A /* LayoutContraintsSwitchCell.swift */,
+				18E61ACF2A4C5F35006E007A /* LabelFactorySwitchCell.swift */,
+			);
+			path = SwitchUIElement;
+			sourceTree = "<group>";
+		};
+		18E61ACA2A4C5E65006E007A /* SegmentUIElement */ = {
+			isa = PBXGroup;
+			children = (
+				18E61AC72A4C5B7C006E007A /* LayoutContraintsSegmentCell.swift */,
+				18E61AC52A4C5B53006E007A /* LabelFactoryForSegmentCell.swift */,
+			);
+			path = SegmentUIElement;
+			sourceTree = "<group>";
+		};
+		18E61AD12A4C615D006E007A /* MenuUIElement */ = {
+			isa = PBXGroup;
+			children = (
+				18E61AD22A4C6183006E007A /* LabelFactoryMenu.swift */,
+				18E61AD42A4C619B006E007A /* LayoutContraintsMenu.swift */,
+			);
+			path = MenuUIElement;
+			sourceTree = "<group>";
+		};
+		18E61AD62A4C64E0006E007A /* HeaderUIElement */ = {
+			isa = PBXGroup;
+			children = (
+				18E61AD72A4C6504006E007A /* LabelFactoryHeader.swift */,
+				18E61AD92A4C652F006E007A /* LayoutContraintsHeader.swift */,
+			);
+			path = HeaderUIElement;
+			sourceTree = "<group>";
+		};
 		32151D5429F1CB22009BAEB9 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,7 +395,6 @@
 		32151D5629F1CD1F009BAEB9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				1880265E2A40A4E600E3466F /* ModelProtocol */,
 				188026392A39B8C400E3466F /* MenuModule */,
 				18D5B0A52A24D50C0055E841 /* FavoriteModule */,
 				3241098C2A03E43D00473864 /* CoinModule */,
@@ -343,6 +409,7 @@
 		3241098C2A03E43D00473864 /* CoinModule */ = {
 			isa = PBXGroup;
 			children = (
+				18E61ABE2A4C4F96006E007A /* FactoryView */,
 				32A516A52A030DE8005662A9 /* CoinViewController.swift */,
 			);
 			path = CoinModule;
@@ -714,6 +781,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E61ACE2A4C5ECD006E007A /* LayoutContraintsSwitchCell.swift in Sources */,
+				18E61AD02A4C5F35006E007A /* LabelFactorySwitchCell.swift in Sources */,
 				180FDCF62A1F5F930026D9ED /* NetworkConstants.swift in Sources */,
 				32A516A22A02E961005662A9 /* MarketViewModel.swift in Sources */,
 				189C3CC82A08E3EF0091492C /* HomeViewModel.swift in Sources */,
@@ -721,12 +790,15 @@
 				18DBF98729FBD5E60095A675 /* NetworkManager.swift in Sources */,
 				18D5B0AA2A24D5630055E841 /* FavoriteViewController.swift in Sources */,
 				188026472A39CBE300E3466F /* SwitchTableViewCell.swift in Sources */,
+				18E61AC62A4C5B53006E007A /* LabelFactoryForSegmentCell.swift in Sources */,
 				32A516A62A030DE8005662A9 /* CoinViewController.swift in Sources */,
 				326A4D022A09BC0A001D1820 /* TableViewHeaderFooterViewExtensions.swift in Sources */,
+				18E61AD32A4C6183006E007A /* LabelFactoryMenu.swift in Sources */,
 				188026512A4061A000E3466F /* HomeCoordinator.swift in Sources */,
 				1880263E2A39B90600E3466F /* MenuViewController.swift in Sources */,
 				189C3CD82A08E4E10091492C /* HomeTopCoinCell.swift in Sources */,
 				32C551A129FB0CFA00588C5F /* XCAssets+Generated.swift in Sources */,
+				18E61AD52A4C619B006E007A /* LayoutContraintsMenu.swift in Sources */,
 				32A516982A02A1A8005662A9 /* NetworkModel.swift in Sources */,
 				188026572A40720900E3466F /* TradeCoordinator.swift in Sources */,
 				189C3CD32A08E49C0091492C /* HeaderSupplementaryView.swift in Sources */,
@@ -738,8 +810,11 @@
 				18D5B0AF2A25F1F50055E841 /* HomeConstantsBestCell.swift in Sources */,
 				3262BAB82A099A5600431CDE /* MarketViewHeader.swift in Sources */,
 				18D5B0B32A25F3240055E841 /* HomeConstantsTopTwentyCell.swift in Sources */,
+				18E61AC22A4C4FD4006E007A /* LayoutContraintsCoinVC.swift in Sources */,
 				325FD34D29F1C7010050B269 /* AppDelegate.swift in Sources */,
 				32C5519F29FB089700588C5F /* TradeViewController.swift in Sources */,
+				18E61AD82A4C6504006E007A /* LabelFactoryHeader.swift in Sources */,
+				18E61AC82A4C5B7C006E007A /* LayoutContraintsSegmentCell.swift in Sources */,
 				189C3CDA2A08E4F90091492C /* HomeFavoriteCell.swift in Sources */,
 				1880264C2A405A9500E3466F /* CoordinatorProtocol.swift in Sources */,
 				32A516A42A02F2D5005662A9 /* MarketModel.swift in Sources */,
@@ -748,15 +823,16 @@
 				32A5169D2A02C8A4005662A9 /* TableViewCellExtensions.swift in Sources */,
 				322C362629F9A20F00A90609 /* Strings+Generated.swift in Sources */,
 				18DBF98B29FBD7080095A675 /* NetworkError.swift in Sources */,
+				18E61AC02A4C4FB1006E007A /* LabelFactoryForCoinVC.swift in Sources */,
 				189C3CD02A08E4750091492C /* HomeModel.swift in Sources */,
 				18D5B0B12A25F2180055E841 /* HomeConstantsTopCell.swift in Sources */,
 				189C3CE62A122ED70091492C /* SectionModelCoin.swift in Sources */,
 				325FD34F29F1C7010050B269 /* SceneDelegate.swift in Sources */,
+				18E61ADA2A4C652F006E007A /* LayoutContraintsHeader.swift in Sources */,
 				1880265B2A40953F00E3466F /* TabBarCoordinator.swift in Sources */,
 				32A5169A2A02C841005662A9 /* MarketViewCell.swift in Sources */,
 				32C5519429FB028C00588C5F /* MarketViewController.swift in Sources */,
-				188026602A40A4FB00E3466F /* ModelProtocol.swift in Sources */,
-				188026412A39C04300E3466F /* MenuTableViewCell.swift in Sources */,
+				188026412A39C04300E3466F /* SegmentTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
