@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct HomeCoinModel {
+struct HomeCoinModel: CoinModelProtocol {
     let identifier: UUID
     let id: String
     let name: String
@@ -15,9 +15,8 @@ struct HomeCoinModel {
     let priceChange24h: String
     let priceChangePercentage24h: String
     let marketCapChangePercentage24h: String
-    let coinModel: CoinModel
     init(name: String, image: URL, currentPrice: String,
-         priceChange24h: String, priceChangePercentage24h: String, id: String, marketCapChangePercentage24h: String, coinModel: CoinModel) {
+         priceChange24h: String, priceChangePercentage24h: String, id: String, marketCapChangePercentage24h: String) {
         self.identifier = UUID()
         self.name = name
         self.image = image
@@ -26,7 +25,6 @@ struct HomeCoinModel {
         self.priceChangePercentage24h = priceChangePercentage24h
         self.id = id
         self.marketCapChangePercentage24h = marketCapChangePercentage24h
-        self.coinModel = coinModel
     }
 }
 extension HomeCoinModel: Hashable {

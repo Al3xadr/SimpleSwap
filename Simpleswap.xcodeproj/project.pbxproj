@@ -8,18 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		180FDCF62A1F5F930026D9ED /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FDCF52A1F5F930026D9ED /* NetworkConstants.swift */; };
-		184C32CA2A4AF903006D9B96 /* LabelFactoryForCoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C32C92A4AF903006D9B96 /* LabelFactoryForCoinVC.swift */; };
-		184C32CE2A4B099E006D9B96 /* LayoutContraintsCoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C32CD2A4B099E006D9B96 /* LayoutContraintsCoinVC.swift */; };
-		184C32DA2A4C2B05006D9B96 /* LabelFactoryForSegmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C32D92A4C2B05006D9B96 /* LabelFactoryForSegmentCell.swift */; };
-		184C32DC2A4C2B1E006D9B96 /* LayoutContraintsSegmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C32DB2A4C2B1E006D9B96 /* LayoutContraintsSegmentCell.swift */; };
-		184C32DF2A4C3037006D9B96 /* LabelFactoryForSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C32DE2A4C3037006D9B96 /* LabelFactoryForSwitchCell.swift */; };
-		184C32E12A4C305B006D9B96 /* LayoutContraintsSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C32E02A4C305B006D9B96 /* LayoutContraintsSwitchCell.swift */; };
-		184C32E42A4C331B006D9B96 /* LabelFactoryForMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C32E32A4C331B006D9B96 /* LabelFactoryForMenu.swift */; };
-		184C32E62A4C3341006D9B96 /* LayoutContraintsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C32E52A4C3341006D9B96 /* LayoutContraintsMenu.swift */; };
-		184C32EC2A4C3718006D9B96 /* LabelFactoryForHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C32EB2A4C3718006D9B96 /* LabelFactoryForHeaderView.swift */; };
-		184C32EE2A4C374F006D9B96 /* LayoutConstraintFactoryForHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C32ED2A4C374F006D9B96 /* LayoutConstraintFactoryForHeaderView.swift */; };
 		1880263E2A39B90600E3466F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880263D2A39B90600E3466F /* MenuViewController.swift */; };
-		188026412A39C04300E3466F /* SegmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188026402A39C04300E3466F /* SegmentTableViewCell.swift */; };
+		188026412A39C04300E3466F /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188026402A39C04300E3466F /* MenuTableViewCell.swift */; };
 		188026432A39C41000E3466F /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188026422A39C41000E3466F /* MenuModel.swift */; };
 		188026452A39C50600E3466F /* SectionMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188026442A39C50600E3466F /* SectionMenu.swift */; };
 		188026472A39CBE300E3466F /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188026462A39CBE300E3466F /* SwitchTableViewCell.swift */; };
@@ -30,6 +20,7 @@
 		188026572A40720900E3466F /* TradeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188026562A40720900E3466F /* TradeCoordinator.swift */; };
 		188026592A40721B00E3466F /* FavoriteCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188026582A40721B00E3466F /* FavoriteCoordinator.swift */; };
 		1880265B2A40953F00E3466F /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880265A2A40953F00E3466F /* TabBarCoordinator.swift */; };
+		188026602A40A4FB00E3466F /* ModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880265F2A40A4FB00E3466F /* ModelProtocol.swift */; };
 		189C3CC82A08E3EF0091492C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CC72A08E3EF0091492C /* HomeViewModel.swift */; };
 		189C3CD02A08E4750091492C /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CCF2A08E4750091492C /* HomeModel.swift */; };
 		189C3CD32A08E49C0091492C /* HeaderSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C3CD22A08E49C0091492C /* HeaderSupplementaryView.swift */; };
@@ -88,18 +79,8 @@
 
 /* Begin PBXFileReference section */
 		180FDCF52A1F5F930026D9ED /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
-		184C32C92A4AF903006D9B96 /* LabelFactoryForCoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactoryForCoinVC.swift; sourceTree = "<group>"; };
-		184C32CD2A4B099E006D9B96 /* LayoutContraintsCoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutContraintsCoinVC.swift; sourceTree = "<group>"; };
-		184C32D92A4C2B05006D9B96 /* LabelFactoryForSegmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LabelFactoryForSegmentCell.swift; path = ../../../../../../../../../../LabelFactoryForSegmentCell.swift; sourceTree = "<group>"; };
-		184C32DB2A4C2B1E006D9B96 /* LayoutContraintsSegmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LayoutContraintsSegmentCell.swift; path = ../../../../../../../../../../LayoutContraintsSegmentCell.swift; sourceTree = "<group>"; };
-		184C32DE2A4C3037006D9B96 /* LabelFactoryForSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LabelFactoryForSwitchCell.swift; path = ../../../../../../../../../../LabelFactoryForSwitchCell.swift; sourceTree = "<group>"; };
-		184C32E02A4C305B006D9B96 /* LayoutContraintsSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LayoutContraintsSwitchCell.swift; path = ../../../../../../../../../../LayoutContraintsSwitchCell.swift; sourceTree = "<group>"; };
-		184C32E32A4C331B006D9B96 /* LabelFactoryForMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LabelFactoryForMenu.swift; path = ../../../../../../../../../../LabelFactoryForMenu.swift; sourceTree = "<group>"; };
-		184C32E52A4C3341006D9B96 /* LayoutContraintsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LayoutContraintsMenu.swift; path = ../../../../../../../../../../LayoutContraintsMenu.swift; sourceTree = "<group>"; };
-		184C32EB2A4C3718006D9B96 /* LabelFactoryForHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LabelFactoryForHeaderView.swift; path = ../../../../../../../../../../../LabelFactoryForHeaderView.swift; sourceTree = "<group>"; };
-		184C32ED2A4C374F006D9B96 /* LayoutConstraintFactoryForHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LayoutConstraintFactoryForHeaderView.swift; path = ../../../../../../../../../../../LayoutConstraintFactoryForHeaderView.swift; sourceTree = "<group>"; };
 		1880263D2A39B90600E3466F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		188026402A39C04300E3466F /* SegmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentTableViewCell.swift; sourceTree = "<group>"; };
+		188026402A39C04300E3466F /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		188026422A39C41000E3466F /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		188026442A39C50600E3466F /* SectionMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionMenu.swift; sourceTree = "<group>"; };
 		188026462A39CBE300E3466F /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
@@ -110,6 +91,7 @@
 		188026562A40720900E3466F /* TradeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeCoordinator.swift; sourceTree = "<group>"; };
 		188026582A40721B00E3466F /* FavoriteCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCoordinator.swift; sourceTree = "<group>"; };
 		1880265A2A40953F00E3466F /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		1880265F2A40A4FB00E3466F /* ModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProtocol.swift; sourceTree = "<group>"; };
 		189C3CC72A08E3EF0091492C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		189C3CCF2A08E4750091492C /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		189C3CD22A08E49C0091492C /* HeaderSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSupplementaryView.swift; sourceTree = "<group>"; };
@@ -178,71 +160,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		184C32CB2A4B08C4006D9B96 /* CoinView */ = {
-			isa = PBXGroup;
-			children = (
-				184C32D02A4C2A03006D9B96 /* UIElements+Contraints */,
-				32A516A52A030DE8005662A9 /* CoinViewController.swift */,
-			);
-			path = CoinView;
-			sourceTree = "<group>";
-		};
-		184C32CF2A4C29A6006D9B96 /* UIElements+Contraints */ = {
-			isa = PBXGroup;
-			children = (
-				184C32E22A4C32C1006D9B96 /* ViewMenu */,
-				184C32DD2A4C300B006D9B96 /* ViewSwitchCell */,
-				184C32D52A4C2A75006D9B96 /* ViewSegmentCell */,
-			);
-			path = "UIElements+Contraints";
-			sourceTree = "<group>";
-		};
-		184C32D02A4C2A03006D9B96 /* UIElements+Contraints */ = {
-			isa = PBXGroup;
-			children = (
-				184C32C92A4AF903006D9B96 /* LabelFactoryForCoinVC.swift */,
-				184C32CD2A4B099E006D9B96 /* LayoutContraintsCoinVC.swift */,
-			);
-			path = "UIElements+Contraints";
-			sourceTree = "<group>";
-		};
-		184C32D52A4C2A75006D9B96 /* ViewSegmentCell */ = {
-			isa = PBXGroup;
-			children = (
-				184C32D92A4C2B05006D9B96 /* LabelFactoryForSegmentCell.swift */,
-				184C32DB2A4C2B1E006D9B96 /* LayoutContraintsSegmentCell.swift */,
-			);
-			path = ViewSegmentCell;
-			sourceTree = "<group>";
-		};
-		184C32DD2A4C300B006D9B96 /* ViewSwitchCell */ = {
-			isa = PBXGroup;
-			children = (
-				184C32DE2A4C3037006D9B96 /* LabelFactoryForSwitchCell.swift */,
-				184C32E02A4C305B006D9B96 /* LayoutContraintsSwitchCell.swift */,
-			);
-			path = ViewSwitchCell;
-			sourceTree = "<group>";
-		};
-		184C32E22A4C32C1006D9B96 /* ViewMenu */ = {
-			isa = PBXGroup;
-			children = (
-				184C32E92A4C3699006D9B96 /* FactoryHeaderView */,
-				184C32E32A4C331B006D9B96 /* LabelFactoryForMenu.swift */,
-				184C32E52A4C3341006D9B96 /* LayoutContraintsMenu.swift */,
-			);
-			path = ViewMenu;
-			sourceTree = "<group>";
-		};
-		184C32E92A4C3699006D9B96 /* FactoryHeaderView */ = {
-			isa = PBXGroup;
-			children = (
-				184C32EB2A4C3718006D9B96 /* LabelFactoryForHeaderView.swift */,
-				184C32ED2A4C374F006D9B96 /* LayoutConstraintFactoryForHeaderView.swift */,
-			);
-			path = FactoryHeaderView;
-			sourceTree = "<group>";
-		};
 		188026392A39B8C400E3466F /* MenuModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,8 +198,7 @@
 		1880263F2A39C02F00E3466F /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				184C32CF2A4C29A6006D9B96 /* UIElements+Contraints */,
-				188026402A39C04300E3466F /* SegmentTableViewCell.swift */,
+				188026402A39C04300E3466F /* MenuTableViewCell.swift */,
 				188026462A39CBE300E3466F /* SwitchTableViewCell.swift */,
 			);
 			path = TableViewCell;
@@ -308,6 +224,14 @@
 				1880264B2A405A9500E3466F /* CoordinatorProtocol.swift */,
 			);
 			path = CoordinatorProtocol;
+			sourceTree = "<group>";
+		};
+		1880265E2A40A4E600E3466F /* ModelProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				1880265F2A40A4FB00E3466F /* ModelProtocol.swift */,
+			);
+			path = ModelProtocol;
 			sourceTree = "<group>";
 		};
 		189C3CD12A08E4920091492C /* HeaderSupplementaryView */ = {
@@ -404,6 +328,7 @@
 		32151D5629F1CD1F009BAEB9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				1880265E2A40A4E600E3466F /* ModelProtocol */,
 				188026392A39B8C400E3466F /* MenuModule */,
 				18D5B0A52A24D50C0055E841 /* FavoriteModule */,
 				3241098C2A03E43D00473864 /* CoinModule */,
@@ -418,7 +343,7 @@
 		3241098C2A03E43D00473864 /* CoinModule */ = {
 			isa = PBXGroup;
 			children = (
-				184C32CB2A4B08C4006D9B96 /* CoinView */,
+				32A516A52A030DE8005662A9 /* CoinViewController.swift */,
 			);
 			path = CoinModule;
 			sourceTree = "<group>";
@@ -789,16 +714,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				184C32E12A4C305B006D9B96 /* LayoutContraintsSwitchCell.swift in Sources */,
 				180FDCF62A1F5F930026D9ED /* NetworkConstants.swift in Sources */,
 				32A516A22A02E961005662A9 /* MarketViewModel.swift in Sources */,
 				189C3CC82A08E3EF0091492C /* HomeViewModel.swift in Sources */,
 				188026592A40721B00E3466F /* FavoriteCoordinator.swift in Sources */,
 				18DBF98729FBD5E60095A675 /* NetworkManager.swift in Sources */,
 				18D5B0AA2A24D5630055E841 /* FavoriteViewController.swift in Sources */,
-				184C32E42A4C331B006D9B96 /* LabelFactoryForMenu.swift in Sources */,
 				188026472A39CBE300E3466F /* SwitchTableViewCell.swift in Sources */,
-				184C32DA2A4C2B05006D9B96 /* LabelFactoryForSegmentCell.swift in Sources */,
 				32A516A62A030DE8005662A9 /* CoinViewController.swift in Sources */,
 				326A4D022A09BC0A001D1820 /* TableViewHeaderFooterViewExtensions.swift in Sources */,
 				188026512A4061A000E3466F /* HomeCoordinator.swift in Sources */,
@@ -806,7 +728,6 @@
 				189C3CD82A08E4E10091492C /* HomeTopCoinCell.swift in Sources */,
 				32C551A129FB0CFA00588C5F /* XCAssets+Generated.swift in Sources */,
 				32A516982A02A1A8005662A9 /* NetworkModel.swift in Sources */,
-				184C32E62A4C3341006D9B96 /* LayoutContraintsMenu.swift in Sources */,
 				188026572A40720900E3466F /* TradeCoordinator.swift in Sources */,
 				189C3CD32A08E49C0091492C /* HeaderSupplementaryView.swift in Sources */,
 				188026532A406D7700E3466F /* AppCoordinator.swift in Sources */,
@@ -817,19 +738,13 @@
 				18D5B0AF2A25F1F50055E841 /* HomeConstantsBestCell.swift in Sources */,
 				3262BAB82A099A5600431CDE /* MarketViewHeader.swift in Sources */,
 				18D5B0B32A25F3240055E841 /* HomeConstantsTopTwentyCell.swift in Sources */,
-				184C32CE2A4B099E006D9B96 /* LayoutContraintsCoinVC.swift in Sources */,
 				325FD34D29F1C7010050B269 /* AppDelegate.swift in Sources */,
 				32C5519F29FB089700588C5F /* TradeViewController.swift in Sources */,
-				184C32EE2A4C374F006D9B96 /* LayoutConstraintFactoryForHeaderView.swift in Sources */,
-				184C32DC2A4C2B1E006D9B96 /* LayoutContraintsSegmentCell.swift in Sources */,
 				189C3CDA2A08E4F90091492C /* HomeFavoriteCell.swift in Sources */,
-				184C32DF2A4C3037006D9B96 /* LabelFactoryForSwitchCell.swift in Sources */,
 				1880264C2A405A9500E3466F /* CoordinatorProtocol.swift in Sources */,
 				32A516A42A02F2D5005662A9 /* MarketModel.swift in Sources */,
 				188026432A39C41000E3466F /* MenuModel.swift in Sources */,
-				184C32EC2A4C3718006D9B96 /* LabelFactoryForHeaderView.swift in Sources */,
 				188026552A4071F600E3466F /* MarketCoordinator.swift in Sources */,
-				184C32CA2A4AF903006D9B96 /* LabelFactoryForCoinVC.swift in Sources */,
 				32A5169D2A02C8A4005662A9 /* TableViewCellExtensions.swift in Sources */,
 				322C362629F9A20F00A90609 /* Strings+Generated.swift in Sources */,
 				18DBF98B29FBD7080095A675 /* NetworkError.swift in Sources */,
@@ -840,7 +755,8 @@
 				1880265B2A40953F00E3466F /* TabBarCoordinator.swift in Sources */,
 				32A5169A2A02C841005662A9 /* MarketViewCell.swift in Sources */,
 				32C5519429FB028C00588C5F /* MarketViewController.swift in Sources */,
-				188026412A39C04300E3466F /* SegmentTableViewCell.swift in Sources */,
+				188026602A40A4FB00E3466F /* ModelProtocol.swift in Sources */,
+				188026412A39C04300E3466F /* MenuTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

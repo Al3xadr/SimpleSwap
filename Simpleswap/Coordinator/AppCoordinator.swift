@@ -18,7 +18,7 @@ final class AppCoordinator: NSObject, Coordinator, UITabBarControllerDelegate {
     func start() {
         print("AppCoordinator")
         
-        let tabBarCoordinator = TabBarCoordinator(tabBarController: tabBarController, navigationController: navigationController ?? UINavigationController())
+        let tabBarCoordinator = TabBarCoordinator(tabBarController: tabBarController, navigationController: navigationController!)
         tabBarController.coordinator = tabBarCoordinator
         tabBarCoordinator.start()
         

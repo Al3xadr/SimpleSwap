@@ -43,45 +43,16 @@ final class MarketViewModel: MarketViewModelProtocol {
     }
 
     private func fetchCoins() {
-        for coin in coinsData {
-            guard let urlPic = URL(string: coin.image) else { return }
-            let coinModel = CoinModel(
-                id: coin.id,
-                symbol: coin.symbol,
-                name: coin.name,
-                image: coin.image,
-                currentPrice: coin.currentPrice,
-                marketCap: coin.marketCap,
-                marketCapRank: coin.marketCapRank,
-                fullyDilutedValuation: coin.fullyDilutedValuation,
-                totalVolume: coin.totalVolume,
-                high24H: coin.high24H,
-                low24H: coin.low24H,
-                priceChange24H: coin.priceChange24H,
-                priceChangePercentage24H: coin.priceChangePercentage24H,
-                marketCapChange24H: coin.marketCapChange24H,
-                marketCapChangePercentage24H: coin.marketCapChangePercentage24H,
-                circulatingSupply: coin.circulatingSupply,
-                totalSupply: coin.totalSupply,
-                maxSupply: coin.maxSupply,
-                ath: coin.ath,
-                athChangePercentage: coin.athChangePercentage,
-                athDate: coin.athDate,
-                atl: coin.atl,
-                atlChangePercentage: coin.atlChangePercentage,
-                atlDate: coin.atlDate,
-                roi: coin.roi,
-                lastUpdated: coin.lastUpdated
-            )
+        for coin in 0..<coinsData.count {
+            guard let urlPic = URL(string: coinsData[coin].image) else { return }
             coins.append(Coin(
                 image: urlPic,
-                name: coin.name,
-                symbol: coin.symbol.uppercased(),
-                currentPrice: "$\(coin.currentPrice)",
-                change: String(coin.priceChangePercentage24H),
-                cap: "$" + String(coin.marketCap),
-                vol: String(coin.totalVolume),
-                coinModel: coinModel
+                name: coinsData[coin].name,
+                symbol: coinsData[coin].symbol.uppercased(),
+                currentPrice: "$\(coinsData[coin].currentPrice)",
+                change: String(coinsData[coin].priceChangePercentage24H),
+                cap: "$" + String(coinsData[coin].marketCap),
+                vol: String(coinsData[coin].totalVolume)
             ))
         }
     }
