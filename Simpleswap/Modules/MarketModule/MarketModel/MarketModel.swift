@@ -6,7 +6,7 @@
 
 import Foundation
 
-struct Coin: CoinModelProtocol {
+struct Coin {
     let image: URL
     let name: String
     let symbol: String
@@ -14,4 +14,5 @@ struct Coin: CoinModelProtocol {
     let change: String
     let cap: String
     let vol: String
+    let coinModel: CoinModel
 }
