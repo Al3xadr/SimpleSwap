@@ -7,29 +7,17 @@
 import Foundation
 
 struct CoinModel: Decodable {
-    let id: String
-    let symbol: String
-    let name: String
+    let id, symbol, name: String
     let image: String
     let currentPrice: Double
-    let marketCap: Int
-    let marketCapRank: Int
+    let marketCap, marketCapRank: Int
     let fullyDilutedValuation: Int?
-    let totalVolume: Double
-    let high24H: Double
-    let low24H: Double
-    let priceChange24H: Double
-    let priceChangePercentage24H: Double
-    let marketCapChange24H: Double
-    let marketCapChangePercentage24H: Double
-    let circulatingSupply: Double
-    let totalSupply: Double?
-    let maxSupply: Double?
-    let ath: Double
-    let athChangePercentage: Double
+    let totalVolume, high24H, low24H, priceChange24H: Double
+    let priceChangePercentage24H, marketCapChange24H, marketCapChangePercentage24H, circulatingSupply: Double
+    let totalSupply, maxSupply: Double?
+    let ath, athChangePercentage: Double
     let athDate: Date
-    let atl: Double
-    let atlChangePercentage: Double
+    let atl, atlChangePercentage: Double
     let atlDate: String
     let roi: Roi?
     let lastUpdated: String

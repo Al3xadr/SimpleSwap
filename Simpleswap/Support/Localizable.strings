@@ -13,7 +13,6 @@
 "priceAnd24Change" = "Price/24h Change";
 "capAndVol" = "Cap/Vol";
 
-
 "BaseUrl" = "https://api.coingecko.com/api/v3";
 "CoinsMarket" = "/coins/markets";
 "Usd" = "usd";
@@ -22,8 +21,6 @@
 "Page"= "1";
 "SparkLine" = "false";
 "Local" = "en";
-
-
 "BestCell" = "BestCellCoin";
 "TopCell" ="TopCellCoin";
 "TopTwentyCell" = "TopTwentyCellCoin";
